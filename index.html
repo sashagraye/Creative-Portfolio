@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>이태현 · Portfolio — SM엔터테인먼트 지원용</title>
+<meta name="description" content="영상·디자인·AI 포트폴리오. 중화권 아티스트 전담 영상 콘텐츠 제작 인턴십 지원용.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_ds/new-form-design-system-2d92d9e6-ee03-4d27-8691-126e785b9f03/tokens/tokens.css">
+<link rel="stylesheet" href="_ds/new-form-design-system-2d92d9e6-ee03-4d27-8691-126e785b9f03/styles.css">
+<script src="_ds/new-form-design-system-2d92d9e6-ee03-4d27-8691-126e785b9f03/_ds_bundle.js"></script>
+<script src="./poster-layers.js"></script>
+<style>
+  body { margin: 0; background: var(--surface-canvas); }
+  a { color: var(--color-press-black); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  img, image-slot, video[data-loop] { filter: none; }
+  video[data-loop] { transition: opacity var(--duration-base) var(--ease-out-editorial); }
+  [data-cursor-link] * { cursor: inherit; }
+  [data-swap="bar"] { transition: transform 120ms linear; }
+  @keyframes dgBase {
+    0%, 34% { transform: translateX(0); filter: brightness(1); }
+    44%, 78% { transform: translateX(-24%); filter: brightness(0.82); }
+    88%, 100% { transform: translateX(0); filter: brightness(1); }
+  }
+  @keyframes dgPush {
+    0%, 34% { transform: translateX(100%); }
+    44%, 78% { transform: translateX(0); }
+    88%, 100% { transform: translateX(100%); }
+  }
+  @keyframes orbSpin { to { transform: rotate(360deg); } }
+  @keyframes caretBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes playHint {
+    0% { opacity: 0; transform: translate(-50%,-8px); }
+    7% { opacity: 1; transform: translate(-50%,0); }
+    87% { opacity: 1; transform: translate(-50%,0); }
+    100% { opacity: 0; transform: translate(-50%,-8px); }
+  }
+  @keyframes hintNudge {
+    0%, 100% { transform: translateY(-2px); opacity: .75; }
+    50% { transform: translateY(3px); opacity: 1; }
+  }
+  [data-morph-ai] textarea::placeholder { color: rgba(255,255,255,.45); }
+  @media (prefers-reduced-motion: reduce) {
+    [data-orb] { animation: none !important; }
+    [data-dg-a], [data-dg-b] { animation: none !important; }
+    [data-dg-b] { transform: translateX(100%); }
+  }
+
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:clip;background:var(--surface-canvas)">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div>
+  
+
+  <section data-screen-label="Hero" style="max-width:var(--page-max-width);margin:0 auto;padding:var(--spacing-40) var(--gutter) var(--spacing-120);display:flex;flex-direction:column;justify-content:center;gap:var(--spacing-45);min-height:calc(100dvh - 180px)">
+    <div style="--sy:0">
+      <h1 style="margin:0;font-size:clamp(46px,7.6vw,104px);font-weight:800;letter-spacing:-0.02em;text-transform:uppercase;color:var(--color-press-black);display:flex;flex-direction:column;align-items:center;padding:0.5em 0;user-select:none">
+        <span style="overflow:hidden;height:0.82em;transform:translateX(-0.72em) skew(60deg,-30deg) scaleY(0.66667)">
+          <span style="display:block;height:0.82em;line-height:0.76em;padding:0 0.2em;white-space:nowrap;transform:translateY(calc(var(--sy,0) * -0.82em));transition:transform 760ms cubic-bezier(0.16,1,0.3,1)">&nbsp;</span>
+          <span style="display:block;height:0.82em;line-height:0.76em;padding:0 0.2em;white-space:nowrap;transform:translateY(calc(var(--sy,0) * -0.82em));transition:transform 760ms cubic-bezier(0.16,1,0.3,1)">Video</span>
+        </span>
+        <span style="overflow:hidden;height:0.82em;transform:translateX(-0.36em) skew(0deg,-30deg) scaleY(1.33333)">
+          <span style="display:block;height:0.82em;line-height:0.76em;padding:0 0.2em;white-space:nowrap;transform:translateY(calc(var(--sy,0) * -0.82em));transition:transform 760ms cubic-bezier(0.16,1,0.3,1);transition-delay:70ms">Video</span>
+          <span style="display:block;height:0.82em;line-height:0.76em;padding:0 0.2em;white-space:nowrap;transform:translateY(calc(var(--sy,0) * -0.82em));transition:transform 760ms cubic-bezier(0.16,1,0.3,1);transition-delay:70ms">Design</span>
+        </span>
+        <span style="overflow:hidden;height:0.82em;transform:skew(60deg,-30deg) scaleY(0.66667)">
+          <span style="display:block;height:0.82em;line-height:0.76em;padding:0 0.2em;white-space:nowrap;transform:translateY(calc(var(--sy,0) * -0.82em));transition:transform 760ms cubic-bezier(0.16,1,0.3,1);transition-delay:140ms">Design</span>
+          <span style="display:block;height:0.82em;line-height:0.76em;padding:0 0.2em;white-space:nowrap;transform:translateY(calc(var(--sy,0) * -0.82em));transition:transform 760ms cubic-bezier(0.16,1,0.3,1);transition-delay:140ms">AI</span>
+        </span>
+        <span style="overflow:hidden;height:0.82em;transform:translateX(0.36em) skew(0deg,-30deg) scaleY(1.33333)">
+          <span style="display:block;height:0.82em;line-height:0.76em;padding:0 0.2em;white-space:nowrap;transform:translateY(calc(var(--sy,0) * -0.82em));transition:transform 760ms cubic-bezier(0.16,1,0.3,1);transition-delay:210ms">AI</span>
+          <span style="display:block;height:0.82em;line-height:0.76em;padding:0 0.2em;white-space:nowrap;transform:translateY(calc(var(--sy,0) * -0.82em));transition:transform 760ms cubic-bezier(0.16,1,0.3,1);transition-delay:210ms">&nbsp;</span>
+        </span>
+      </h1>
+    </div>
+    
+  </section>
+
+  <div style="line-height:0">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="display:block;width:100%;height:110px;overflow:visible" aria-hidden="true">
+      <path data-crest="" data-base="88" data-gain="1.5" d="M0,86 C110,82 190,60 300,56 C420,51 500,72 620,80 C700,85 760,84 840,66 C940,44 1030,18 1140,16 C1250,15 1340,50 1440,66 L1440,120 L0,120 Z" fill="#121613"></path>
+    </svg>
+  </div>
+
+  <section id="film" data-screen-label="Film section" style="position:relative;z-index:10;background:var(--surface-dark-section);padding:var(--spacing-60) 0 var(--spacing-190)">
+    <div style="max-width:var(--page-max-width);margin:0 auto;padding:0 var(--gutter);display:flex;flex-direction:column;gap:var(--spacing-190)">
+
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-20); border-top: var(--border-hairline) solid var(--color-slate-verdant); padding-top: var(--spacing-25); border-style: none">
+        <span class="micro-label" style="color:var(--color-muted-sage)"><br></span>
+        
+      </div>
+
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:center;column-gap:var(--spacing-60);row-gap:110px">
+        <div style="flex:1 1 520px;display:flex;flex-direction:column;gap:var(--spacing-25)">
+          <h2 class="display-ko" style="margin: 0; color: var(--color-bone-white); font-weight: 500">어떻게 <br>사로잡을 지 <br>먼저 생각하고</h2>
+          
+        </div>
+        <div data-cursor-link="https://www.youtube.com/watch?v=44_bdDDGfCs" data-cursor-note="기획부터 남달랐던 작품 바로가기" style="position:relative;width:640px;height:360px;flex:0 1 640px;cursor:pointer">
+          <div aria-hidden="true" style="width:100%;height:100%;border-radius:14px;background:#e8efe9"></div><div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
+            <span style="font-size:var(--text-body);color:var(--color-bone-white)">봉을 아십니까 (2024) 中</span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">인터랙티브 단편영화 · 총감독 · 8인</span>
+          </div>
+          <video data-loop="media/bong.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
+          <div data-play-hint="" style="position:absolute;left:50%;bottom:calc(100% + 20px);transform:translate(-50%,0);color:var(--color-accent);font-size:var(--text-body);white-space:nowrap;opacity:0;pointer-events:none;z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px">
+            <span>이곳을 누르면 작품을 볼 수 있습니다</span>
+            <svg width="20" height="26" viewBox="0 0 20 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="animation:hintNudge 1400ms cubic-bezier(0.16,1,0.3,1) infinite">
+              <path d="M10 3v17"></path>
+              <path d="M4 15l6 6 6-6"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="" style="display:flex;flex-wrap:wrap-reverse;align-items:center;gap:var(--spacing-60)">
+        <div style="flex:0 1 640px;display:flex;flex-direction:column;gap:var(--spacing-15)">
+          <div data-cursor-link="https://www.youtube.com/watch?v=PgGLaXEamo8&amp;t=206s" data-cursor-note="처음부터 끝까지 이끌었던 작품 바로가기" style="position:relative;width:100%;height:360px;cursor:pointer">
+            <div aria-hidden="true" style="width:100%;height:100%;border-radius:14px;background:#e8efe9"></div>
+            <video data-loop="media/metro.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
+            <span style="font-size:var(--text-body);color:var(--color-bone-white)">민트사탕 징크스&nbsp;<span style="letter-spacing: -0.18px;">(2025)</span>&nbsp;<span style="letter-spacing: -0.18px;">中</span></span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">단편영화 · 기획·제작 4인</span>
+          </div>
+        </div>
+        <div style="flex:1 1 460px;display:flex;flex-direction:column;gap:var(--spacing-25)">
+          <h2 class="display-ko" style="margin:0;font-weight:500;color:var(--color-bone-white)">기획/촬영/편집을 주도적으로 이끌며&nbsp;</h2>
+        </div>
+      </div>
+
+      <div data-swap-track="1" style="position:relative;width:100%;height:260vh">
+        <div style="position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--spacing-20);text-align:center">
+          <h2 class="display-ko" style="margin:0 0 var(--spacing-15);font-weight:500;color:var(--color-bone-white);max-width:900px">플랫폼 <br>스타일에 맞추고</h2>
+
+          
+
+          <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;width:100%">
+          <div aria-hidden="true"></div>
+          <div style="position:relative;height:min(60vh,640px);flex:0 0 auto;aspect-ratio:9 / 19.5;max-height:calc(100vh - 240px);padding:11px;border-radius:56px;background:var(--color-press-black);box-shadow:0 0 0 1.5px rgba(250,255,250,.16), inset 0 0 0 1.5px rgba(250,255,250,.06)">
+            <div style="position:relative;width:100%;height:100%;border-radius:45px;overflow:hidden;background:var(--color-press-black)">
+              <div data-swap="0" data-swap-slide="1" data-cursor-link="https://www.youtube.com/shorts/o7E9Ay9c8QE" data-cursor-note="공모전 입선 작품 바로가기" style="position:absolute;inset:0;will-change:transform;cursor:pointer">
+                <div aria-hidden="true" style="width:100%;height:100%;border-radius:0px;background:#e8efe9"></div>
+                <video data-loop="media/officers5.mp4" data-swap-video="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
+              </div>
+              <div data-swap="1" data-swap-slide="1" data-cursor-link="https://www.youtube.com/watch?v=6AnOwJ86TJ8" data-cursor-note="공모전 대상 작품 바로가기" style="position:absolute;inset:0;opacity:0;will-change:transform;cursor:pointer">
+                <div aria-hidden="true" style="width:100%;height:100%;border-radius:0px;background:#e8efe9"></div>
+                <video data-loop="media/seoul-econ.mp4" data-swap-video="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
+              </div>
+            </div>
+            <div style="position:absolute;top:23px;left:50%;transform:translateX(-50%);width:31%;height:26px;border-radius:9999px;background:var(--color-press-black)"></div>
+          </div>
+          <div style="position:relative;justify-self:start;width:300px;height:180px;margin-left:var(--spacing-60);text-align:left">
+            <div data-swap="0" data-swap-fly="1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:var(--spacing-20)">
+              <div data-fly="" style="display:flex;align-items:center;gap:var(--spacing-10)">
+                <img src="media/logo-reels.png" alt="" style="width:26px;height:26px;object-fit:contain">
+                <span class="micro-label" style="color: var(--color-muted-sage)">INSTAGRAM REELS</span>
+              </div>
+              <div data-fly="" style="display:flex;flex-direction:column;gap:var(--spacing-8)">
+                <span style="font-size:var(--text-body);color:var(--color-bone-white)">장교숙소 5단지 공모전</span>
+                <span class="micro-label" style="color:var(--color-newsprint-gray)">촬영 숏폼 · 기획·제작 1인</span>
+              </div>
+            </div>
+            <div data-swap="1" data-swap-fly="1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:var(--spacing-20);opacity:0">
+              <div data-fly="" style="display:flex;align-items:center;gap:var(--spacing-10)">
+                <img src="media/logo-shorts.png" alt="" style="width:26px;height:26px;object-fit:contain">
+                <span class="micro-label" style="color: var(--color-muted-sage)">YOUTUBE SHORTS</span>
+              </div>
+              <div data-fly="" style="display:flex;flex-direction:column;gap:var(--spacing-8)">
+                <span style="font-size:var(--text-body);color:var(--color-bone-white)">서울경제 쇼츠 공모전</span>
+                <span class="micro-label" style="color:var(--color-newsprint-gray)">촬영 숏폼 · 기획·제작 8인</span>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--spacing-60)">
+        <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:var(--spacing-25)">
+          <h2 class="display-ko" style="margin:0;font-weight:500;color:var(--color-bone-white)">그래픽 요소까지 한번에<br></h2>
+        </div>
+        <div style="flex:0 1 640px;display:flex;flex-direction:column;gap:var(--spacing-15)">
+          <div data-cursor-link="https://www.youtube.com/watch?v=oRrBqo2g2gs" data-cursor-note="직접 그려서 영상화한 작품 바로가기" style="position:relative;width:100%;height:360px;cursor:pointer">
+            <div aria-hidden="true" style="width:100%;height:100%;border-radius:14px;background:#e8efe9"></div>
+            <video data-loop="media/ai-cut.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
+            <span style="font-size:var(--text-body);color:var(--color-bone-white)">중꺾마의 유래&nbsp;<span style="letter-spacing: -0.18px;">中</span></span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">인포그래픽 영상 · 기획·제작 1인</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="" data-fall-zone="1" style="display:flex;justify-content:center;padding:var(--spacing-120) 0">
+        
+      </div>
+    </div>
+  </section>
+
+  <div data-lip="" data-fall-mask="1" style="position:relative;z-index:10;height:340vh;background:var(--surface-dark-section)">
+    <div data-lip-pin="" style="position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--surface-dark-section)">
+      <div data-lip-core="" aria-hidden="true" style="position:absolute;inset:0;z-index:6;background:#ffffff;clip-path:circle(0px at 50% 50%);pointer-events:none"></div>
+      <h2 data-lip-head="" class="display-ko" style="position:relative;z-index:2;margin:0;font-weight:500;line-height:1;text-align:center;color:#ffffff;white-space:nowrap"><span data-lip-word="" style="position:relative;display:inline-block"><span data-lip-letters="">Des<span data-lip-target="">i</span>gn</span><span data-lip-tools="" aria-hidden="true" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; pointer-events: none; color: #FFFFFF; font-weight: 600">
+        <img data-tool="" src="media/tools/illustrator.png" alt="" style="position:absolute;top:50%;left:50%;width:0.86em;height:0.86em;object-fit:contain;transform:translate(-50%,-50%) scale(0.6);opacity:0;border-radius:0.16em;pointer-events:none">
+        <img data-tool="" src="media/tools/photoshop.png" alt="" style="position:absolute;top:50%;left:50%;width:0.86em;height:0.86em;object-fit:contain;transform:translate(-50%,-50%) scale(0.6);opacity:0;border-radius:0.16em;pointer-events:none">
+        <img data-tool="" src="media/tools/figma.png" alt="" style="position:absolute;top:50%;left:50%;width:0.86em;height:0.86em;object-fit:contain;transform:translate(-50%,-50%) scale(0.6);opacity:0;border-radius:0.16em;pointer-events:none">
+        <img data-tool="" src="media/tools/claude.png" alt="" style="position:absolute;top:50%;left:50%;width:0.86em;height:0.86em;object-fit:contain;transform:translate(-50%,-50%) scale(0.6);opacity:0;border-radius:0.16em;pointer-events:none">
+      </span></span><span data-lip-rest="" style="display: inline-block; font-weight: 500"> 할 수 있으니까.</span></h2>
+      </div>
+  </div>
+
+  <section id="design" data-screen-label="Design section" style="padding: var(--spacing-60) 0 var(--spacing-190); background-color: #FFFFFF">
+    <div style="max-width:var(--page-max-width);margin:0 auto;padding:0 var(--gutter);display:flex;flex-direction:column;gap:var(--spacing-190)">
+
+      <div aria-hidden="true" style="visibility:hidden;pointer-events:none;display:flex;align-items:center;justify-content:space-between;gap:var(--spacing-20);border-top:var(--border-hairline) solid var(--color-press-black);padding-top:var(--spacing-25)">
+        <span class="micro-label" style="color:var(--color-newsprint-gray)">디자인 · design</span>
+        <span class="micro-label" style="padding:var(--spacing-15) var(--spacing-30);border-radius:var(--radius-buttons)">더보기</span>
+      </div>
+
+      <div data-reveal="" style="display:flex;flex-direction:column;align-items:center;gap:var(--spacing-45)">
+        <div style="display:flex;flex-wrap:wrap-reverse;align-items:center;justify-content:center;gap:var(--spacing-60);width:100%;text-align:left">
+          <div style="flex:0 1 620px;display:flex;flex-direction:column;align-items:center;gap:var(--spacing-15)">
+          <div data-cursor-link="https://www.youtube.com/shorts/3NZ9ccGpDJg" data-cursor-note="작품 바로가기" style="position:relative;height:min(60vh,640px);flex:0 0 auto;aspect-ratio:9 / 19.5;max-height:calc(100vh - 240px);cursor:pointer">
+              <div aria-hidden="true" style="width:100%;height:100%;border-radius:14px;background:#e8efe9"></div>
+              <video data-loop="media/metro-indicator.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
+              <span style="font-size:var(--text-body);color:var(--color-press-black)">Seoul Metro Indicator (2025)</span>
+              <span class="micro-label" style="color:var(--color-newsprint-gray)">정보 디자인 · 기획·설계 1인</span>
+            </div>
+          </div>
+          <div style="flex:1 1 340px">
+            <h2 class="display-ko" style="margin: 0; font-weight: 600; color: var(--color-press-black)">창의력을<br>발휘하고</h2>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--spacing-60);width:100%;min-height:100vh;padding:var(--spacing-45) 0">
+          <div style="flex:1 1 340px;display:flex;flex-direction:column;gap:var(--spacing-15)">
+            <h2 class="display-ko" style="margin: 0; font-weight: 600; color: var(--color-press-black)">사용자 경험을 개선하고</h2>
+          </div>
+
+          <div style="flex:0 1 auto;display:flex;flex-direction:column;align-items:center;gap:clamp(56px,7vw,112px);margin-right:clamp(24px,7vw,140px)">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--spacing-45);perspective:1800px;perspective-origin:60% 50%">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:var(--spacing-20);max-width:420px;transform:perspective(1800px) translateZ(-190px) translateX(26px) rotateY(11deg) ;transform-style:preserve-3d;opacity:.72">
+              <span class="micro-label" style="color:var(--color-newsprint-gray)">before</span>
+              <div style="position:relative;height:min(56vh,560px);aspect-ratio:9 / 19.5;padding:10px;border-radius:52px;background:var(--color-press-black);box-shadow:0 2px 4px rgba(18,22,19,.3),0 18px 34px -16px rgba(16,40,22,.44),0 40px 62px -42px rgba(16,40,22,.34),inset 0 1px 0 rgba(250,255,250,.16),inset 0 -1px 0 rgba(250,255,250,.08)">
+                <div style="position:relative;width:100%;height:100%;border-radius:42px;overflow:hidden;background:var(--color-press-black)">
+                  <img data-dg-a="" src="media/dg/before-my.png" alt="당근 나의 당근 기존 화면" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;animation:dgBase 9s 0s infinite;will-change:transform">
+                  <img data-dg-b="" src="media/dg/before-all.png" alt="당근 전체 서비스 기존 화면" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;animation:dgPush 9s 0s infinite;will-change:transform">
+                </div>
+                <div style="position:absolute;top:21px;left:50%;transform:translateX(-50%);width:30%;height:24px;border-radius:9999px;background:var(--color-press-black)"></div>
+              </div>
+              
+            </div>
+            <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:var(--spacing-20);max-width:420px;transform:perspective(1800px) translateZ(60px) rotateY(-4deg);transform-style:preserve-3d">
+              <span class="micro-label" style="color:var(--color-press-black)">after</span>
+              <div data-cursor-link="https://www.figma.com/design/p0kyCRCQLVBrhqsR6PFnS0/%EB%82%98%EC%9D%98-%EB%8B%B9%EA%B7%BC-%EA%B0%9C%EC%84%A0%EC%95%88?node-id=0-1&amp;t=DLqRhVslYfpEbtYE-1" data-cursor-note="개선안 시안 보기" style="cursor:pointer;position:relative;height:min(56vh,560px);aspect-ratio:9 / 19.5;padding:10px;border-radius:52px;background:var(--color-press-black);box-shadow:0 2px 6px rgba(18,22,19,.34),0 22px 40px -18px rgba(16,50,26,.5),0 54px 84px -52px rgba(16,50,26,.36),inset 0 1.5px 0 rgba(250,255,250,.22),inset 0 -1.5px 0 rgba(250,255,250,.1),inset 1px 0 0 rgba(250,255,250,.08),inset -1px 0 0 rgba(250,255,250,.08)">
+                <div style="position:relative;width:100%;height:100%;border-radius:42px;overflow:hidden;background:var(--color-press-black)">
+                  <img data-dg-a="" src="media/dg/after-my.jpg" alt="당근 나의 당근 개선안" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;animation:dgBase 9s -0.6s infinite;will-change:transform">
+                  <img data-dg-b="" src="media/dg/after-svc.jpg" alt="당근 결제 및 서비스 개선안" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;animation:dgPush 9s -0.6s infinite;will-change:transform">
+                </div>
+                <div style="position:absolute;top:21px;left:50%;transform:translateX(-50%);width:30%;height:24px;border-radius:9999px;background:var(--color-press-black)"></div>
+              </div>
+              
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:var(--spacing-8);text-align:center">
+            <span style="font-size:var(--text-body);color:var(--color-press-black)">당근 나의 당근 · 서비스 진입 개선안</span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">UI UX 서비스 개선 / 기획 디자인 1인</span>
+          </div>
+          </div>
+        </div>
+
+        <div data-morph="" style="position:relative;width:100%;height:300vh">
+        <div data-morph-pin="" style="position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--spacing-25)">
+        <h2 data-morph-head="" class="display-ko" style="position: absolute; left: 0; right: 0; top: 50%; margin: 0; font-weight: 600; text-align: center; color: var(--color-press-black); opacity: 0; pointer-events: none; transform: translate(0,calc(-100% - 112px))">이제는 Ai로</h2>
+        <div data-morph-card="" data-poster-stage="" style="position:relative;overflow:hidden;width:100%;max-width:1320px;height:min(78vh,880px);border-radius:var(--radius-images);background:#0b0b0b;will-change:width,height">
+          <div data-morph-body="" style="position:absolute;top:50%;left:50%;width:100%;padding:0 clamp(20px,4vw,60px);box-sizing:border-box;transform:translate(-50%,-50%);transform-origin:50% 50%;will-change:transform,opacity">
+          <div style="position:relative;display:grid;gap:clamp(24px,3vw,40px);justify-items:center;max-width:1320px;margin:0 auto">
+            <h2 class="display-ko" style="margin:0;font-weight:500;text-align:center;color:#ffffff">수상까지 하는 디자인 감각.</h2>
+            <div data-poster-deck="" style="position:relative;width:min(100%,clamp(300px,68vw,856px));aspect-ratio:16/9;perspective:1700px;perspective-origin:50% 44%">
+              <div data-poster-shadow="" aria-hidden="true" style="position:absolute;left:6%;right:6%;top:16%;bottom:-12%;border-radius:32px;background:rgba(0,0,0,.72);filter:blur(46px);opacity:.7;pointer-events:none"></div>
+              <div data-poster-layers="" style="position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(16deg) rotateZ(-7deg);will-change:transform">
+                <img data-pl="" data-depth="0" data-dx="0" data-dy="0" src="assets/poster/pl2-base.png" alt="미리캔버스 광고 대전 최우수상 수상작 포스터" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none">
+                <img data-pl="" data-depth="26" data-dx="7" data-dy="-5" src="assets/poster/pl2-flat.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;will-change:transform">
+                <img data-pl="" data-depth="50" data-dx="-11" data-dy="-7" src="assets/poster/pl2-window.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;will-change:transform">
+                <img data-pl="" data-depth="84" data-dx="15" data-dy="7" src="assets/poster/pl2-sign.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;will-change:transform">
+                <img data-pl="" data-depth="110" data-dx="21" data-dy="11" src="assets/poster/pl2-ui.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;will-change:transform">
+                <img data-pl="" data-depth="134" data-dx="17" data-dy="15" src="assets/poster/pl2-char.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;pointer-events:none;will-change:transform">
+              </div>
+            </div>
+          </div>
+          </div>
+          <div data-morph-ai="" style="position:absolute;top:50%;left:50%;width:100%;height:100%;box-sizing:border-box;transform:translate(-50%,-50%);display:flex;flex-direction:column;padding:12px 14px;opacity:0;pointer-events:none;overflow:hidden">
+            <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
+              <button type="button" tabIndex="-1" title="파일 첨부" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex:0 0 auto;border:0;border-radius:10px;background:transparent;color:#ffffff;cursor:pointer;transition:background var(--duration-fast) var(--ease-out-editorial)" style-hover="background:rgba(255,255,255,.09)"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></button>
+              <div style="position:relative;flex:1 1 auto;min-width:0;height:40px;display:flex;align-items:center">
+                <input data-ai-input="" type="text" aria-hidden="true" readOnly="{{ true }}" tabIndex="-1" style="width:100%;height:40px;box-sizing:border-box;padding:0 2px;border:0;outline:0;background:transparent;font-family:inherit;font-size:16px;color:#ffffff;pointer-events:none">
+                <span data-ai-ph="" aria-hidden="true" style="position:absolute;left:2px;top:50%;transform:translateY(-50%);white-space:nowrap;overflow:hidden;font-size:16px;color:rgba(255,255,255,.42);pointer-events:none"></span>
+              </div>
+              <button type="button" tabIndex="-1" title="음성 입력" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex:0 0 auto;border:0;border-radius:10px;background:transparent;color:#ffffff;cursor:pointer;transition:background var(--duration-fast) var(--ease-out-editorial)" style-hover="background:rgba(255,255,255,.09)"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="11" rx="3"></rect><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><path d="M12 19v3"></path></svg></button>
+              <button data-ai-send="" type="button" tabIndex="-1" title="보내기" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex:0 0 auto;border:0;border-radius:10px;background:transparent;color:#ffffff;cursor:pointer;transition:background var(--duration-fast) var(--ease-out-editorial);border-radius:9999px;background:#ffffff;color:var(--color-press-black)" style-hover="background:rgba(255,255,255,.86)"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"></path><path d="M22 2l-7 20-4-9-9-4Z"></path></svg></button>
+            </div>
+          </div>
+        </div>
+        <div data-morph-cap="" style="display:flex;flex-direction:column;align-items:center;gap:var(--spacing-8)">
+          <span style="font-size:var(--text-body);color:var(--color-press-black)">미리캔버스 광고 대전 (2025)</span>
+          <span class="micro-label" style="color:var(--color-newsprint-gray)">광고 포스터 · 기획·제작 1인 · 최우수상</span>
+        </div>
+        </div>
+        </div>
+      </div>
+
+      
+
+      
+    </div>
+  </section>
+
+  <div style="line-height:0;padding-top:clamp(120px,18vh,260px);background-color:#FFFFFF">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="display:block;width:100%;height:110px;overflow:visible" aria-hidden="true">
+      <path data-crest="" data-base="88" data-gain="1.5" d="M0,86 C110,82 190,60 300,56 C420,51 500,72 620,80 C700,85 760,84 840,66 C940,44 1030,18 1140,16 C1250,15 1340,50 1440,66 L1440,120 L0,120 Z" fill="#121613"></path>
+    </svg>
+  </div>
+
+  <section id="ai" data-screen-label="AI section" style="background:var(--surface-dark-section);padding:var(--spacing-60) 0 var(--spacing-190)">
+    <div style="max-width:var(--page-max-width);margin:0 auto;padding:0 var(--gutter);display:flex;flex-direction:column;gap:var(--spacing-190)">
+
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-20); border-top: var(--border-hairline) solid var(--color-slate-verdant); padding-top: var(--spacing-25); border-style: none">
+        <span class="micro-label" style="color:var(--color-muted-sage)"><br></span>
+        
+      </div>
+
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;gap:var(--spacing-45)">
+        <h2 class="display-ko" style="margin:0;font-weight:500;text-align:center;color:var(--color-bone-white);max-width:1000px">해봤기 때문에 <br>시킬 줄도 압니다</h2>
+        
+      </div>
+
+      
+
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--spacing-60)">
+        <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:var(--spacing-25)">
+          <h2 class="display-ko" style="margin:0;font-weight:500;color:var(--color-bone-white)">AI로<br>빠르게 시안을 제작하고</h2>
+        </div>
+        <div style="flex:0 1 640px;display:flex;flex-direction:column;align-items:center;gap:var(--spacing-15)">
+          <div style="display:flex;gap:var(--spacing-15);width:100%">
+            <div data-cursor-link="https://www.youtube.com/shorts/ChHxsycgXYQ" data-cursor-note="시안 1 바로가기" style="position:relative;flex:1 1 0;aspect-ratio:3 / 5;border-radius:var(--radius-images);overflow:hidden;cursor:pointer">
+              <div aria-hidden="true" style="width:100%;height:100%;border-radius:0px;background:#e8efe9"></div>
+              <video data-loop="media/scent-1.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
+            </div>
+            <div data-cursor-link="https://www.youtube.com/shorts/BYVEnpQ6vsw" data-cursor-note="시안 2 바로가기" style="position:relative;flex:1 1 0;aspect-ratio:3 / 5;border-radius:var(--radius-images);overflow:hidden;cursor:pointer">
+              <div aria-hidden="true" style="width:100%;height:100%;border-radius:0px;background:#e8efe9"></div>
+              <video data-loop="media/scent-2.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:var(--spacing-8)">
+            <span style="font-size:var(--text-body);color:var(--color-bone-white)">The Scent of Page (2024)</span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">브랜드 마케팅 시안 · 기획·제작 1인</span>
+          </div>
+        </div>
+      </div><div data-reveal="" style="display:flex;flex-wrap:wrap-reverse;align-items:center;justify-content:center;gap:var(--spacing-60)">
+        <div style="flex:0 1 380px;display:flex;flex-direction:column;align-items:center;gap:var(--spacing-15)">
+          <div data-cursor-link="https://www.youtube.com/shorts/_EQjttJx0mQ" data-cursor-note="출품작 바로가기" style="position:relative;width:100%;aspect-ratio:9 / 16;border-radius:var(--radius-images);overflow:hidden;cursor:pointer">
+            <div aria-hidden="true" style="width:100%;height:100%;border-radius:0px;background:#e8efe9"></div>
+            <video data-loop="media/pureal.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:var(--spacing-8)">
+            <span style="font-size:var(--text-body);color:var(--color-bone-white)">Pureal 공모전 (2025)</span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">AI 숏폼 · 기획·제작 1인</span>
+          </div>
+        </div>
+        <div style="flex:1 1 380px">
+          <h2 class="display-ko" style="margin:0;font-weight:500;color:var(--color-bone-white)">브랜드 <br>쇼츠를 만듭니다</h2>
+        </div>
+      </div>
+
+      <div data-reveal="" style="display:flex;flex-direction:column;align-items:center;gap:var(--spacing-60)">
+        <h2 class="display-ko" style="margin:0;font-weight:500;text-align:center;color:var(--color-bone-white);max-width:1000px">영상을 만들고 <br>이미지를 만드는<br>지원자 이태현입니다</h2>
+        <div style="width:min(100%,860px);display:flex;flex-direction:column;gap:var(--spacing-15)">
+          <div data-cursor-link="https://www.youtube.com/watch?v=fGt0tGjqbeM" data-cursor-note="작품 바로가기" style="position:relative;width:100%;height:480px;cursor:pointer">
+            <div aria-hidden="true" style="width:100%;height:100%;border-radius:14px;background:#e8efe9"></div>
+            <video data-loop="media/milk.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--spacing-15)">
+            <span style="font-size:var(--text-body);color:var(--color-bone-white)">우유공장 이야기 (2024)</span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">AI 단편 애니메이션 · 기획·제작 1인</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-fx-root="" data-mode="dark" style="background:#121613;display:flex;flex-wrap:wrap;align-items:stretch;min-height:560px">
+    <div data-fx="panel" style="flex:1 1 440px;box-sizing:border-box;padding:var(--gutter);display:flex;flex-direction:column;justify-content:space-between;gap:var(--spacing-45);position:relative">
+
+      <button data-fx-toggle="" type="button" aria-label="테마 전환" style="position:absolute;top:var(--gutter);right:var(--gutter);width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:var(--border-hairline) solid #232924;border-radius:9999px;background:transparent;color:#fafffa;cursor:pointer;padding:0" data-fx-ink="1" data-fx-rule-border="1">
+        <svg data-fx-icon="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.6"></circle>
+          <path d="M12 2.4v2.2M12 19.4v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.4 12h2.2M19.4 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"></path>
+        </svg>
+        <svg data-fx-icon="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" style="display:none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <div style="display:flex;flex-direction:column;gap:var(--spacing-30)">
+        <div data-fx-ink="1" style="font-family:var(--font-display-latin);font-size:26px;line-height:1;letter-spacing:-0.02em;display:flex;gap:7px;color:#fafffa">
+          <span style="border-bottom:var(--border-wordmark-rule) solid var(--color-accent);padding-bottom:2px">Creative Portfolio</span>
+          
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--spacing-4)">
+          <span class="micro-label" data-fx-ink="1" style="color: rgb(250, 255, 250);">MADE BY 이태현</span><span class="micro-label" data-fx-muted="1" style="color: rgb(200, 210, 200);">JULY 6TH 2001</span>
+          
+        </div>
+      </div>
+
+      
+
+      <div data-fx-rule="1" style="display:flex;flex-direction:column;gap:var(--spacing-20);border-top:var(--border-hairline) solid #232924;padding-top:var(--spacing-25)">
+        <a data-fx-ink="1" href="mailto:Grayelee706@gmail.com" style="font-family:var(--font-display-latin);font-size:var(--text-heading-sm);line-height:1;letter-spacing:-0.02em;color:#fafffa">Grayelee706@gmail.com</a>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--spacing-30)">
+          <a class="micro-label" data-fx-ink="1" href="#film" style="color:#fafffa">film</a>
+          <a class="micro-label" data-fx-ink="1" href="#design" style="color:#fafffa">design</a>
+          <a class="micro-label" data-fx-ink="1" href="#ai" style="color:#fafffa">ai</a>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ showBand }}" hint-placeholder-val="{{ true }}">
+      <div style="flex:1 1 440px;position:relative;min-height:360px">
+        <canvas data-dither="" style="position:absolute;inset:0;width:100%;height:100%;display:block;image-rendering:pixelated"></canvas>
+      </div>
+    </sc-if>
+  </footer>
+</div>
+</sc-if>
+
+<sc-if value="{{ active }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Section index" style="background:var(--surface-canvas);min-height:100dvh;padding-bottom:var(--spacing-190)">
+  <header style="max-width:var(--page-max-width);margin:0 auto;padding:var(--nav-pad-y) var(--gutter);display:flex;align-items:baseline;justify-content:space-between;gap:var(--spacing-20)">
+    <span onClick="{{ closeIndex }}" onKeyDown="{{ onCloseKey }}" role="button" tabIndex="0" class="micro-label" style="cursor:pointer;border-bottom:var(--border-wordmark-rule) solid var(--color-accent);padding-bottom:2px">back</span>
+    <span class="micro-label" style="color:var(--color-newsprint-gray)">{{ active.label }}</span>
+  </header>
+
+  <section style="max-width:var(--page-max-width);margin:0 auto;padding:var(--spacing-45) var(--gutter) var(--spacing-120);display:flex;flex-direction:column;gap:var(--spacing-25)">
+    <h1 class="display-ko" style="margin:0;color:var(--color-press-black);white-space:pre-line">{{ active.title }}</h1>
+    <p style="margin:0;max-width:560px;font-size:var(--text-body);line-height:var(--leading-body);color:var(--color-newsprint-gray)">{{ active.note }}</p>
+  </section>
+
+  <section style="max-width:var(--page-max-width);margin:0 auto;padding:0 var(--gutter);display:flex;flex-direction:column">
+    <sc-for list="{{ active.rows }}" as="item" hint-placeholder-count="3">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--spacing-45);border-top:var(--border-hairline) solid var(--color-press-black);padding:var(--spacing-40) 0">
+        <div aria-hidden="true" style="width:480px;height:270px;flex:0 1 480px;border-radius:14px;background:#e8efe9"></div>
+        <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:var(--spacing-15)">
+          <h2 class="heading-ko" style="margin:0;color:var(--color-press-black)">{{ item.title }}</h2>
+          <div style="display:flex;flex-direction:column;gap:var(--spacing-4)">
+            <span class="micro-label" style="color:var(--color-press-black)">{{ item.genre }}</span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">{{ item.role }}</span>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+    <div style="border-top:var(--border-hairline) solid var(--color-press-black)"></div>
+  </section>
+
+  <sc-if value="{{ active.hasTall }}" hint-placeholder-val="{{ false }}">
+    <section style="max-width:var(--page-max-width);margin:0 auto;padding:var(--spacing-120) var(--gutter) 0;display:flex;flex-direction:column;gap:var(--spacing-40)">
+      <span class="micro-label" style="color:var(--color-newsprint-gray)">숏폼 · vertical</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,320px));gap:var(--spacing-40)">
+        <sc-for list="{{ active.tall }}" as="item" hint-placeholder-count="2">
+          <div style="display:flex;flex-direction:column;gap:var(--spacing-15)">
+            <div aria-hidden="true" style="width:100%;height:560px;border-radius:14px;background:#e8efe9"></div>
+            <h2 class="heading-ko" style="margin:0;color:var(--color-press-black)">{{ item.title }}</h2>
+            <span class="micro-label" style="color:var(--color-press-black)">{{ item.genre }}</span>
+            <span class="micro-label" style="color:var(--color-newsprint-gray)">{{ item.role }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+</div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;revealMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showAccentBand&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;posterTilt&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.2,&quot;max&quot;:1.8,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;posterSpread&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.2,&quot;max&quot;:2.4,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+const SECTIONS = {
+  film: {
+    label: '영상 · film & motion',
+    title: '영상 작업\n전체',
+    note: '기획, 연출, 모션까지 직접 만든 영상 작업입니다. 가로형 세 편과 숏폼 두 편.',
+    rows: [
+      { title: '봉을 아십니까 (2024)', genre: '인터랙티브 단편영화', role: '총감독 · 기획·제작 8인', slot: 'idx-film-bong', placeholder: '봉을 아십니까 · 16:9' },
+      { title: 'Seoul Metro Indicator (2025)', genre: 'AR 모션그래픽 · 정보 그래픽', role: '기획·제작 1인', slot: 'idx-film-metro', placeholder: 'Seoul Metro Indicator · 16:9' },
+      { title: '중꺾마의 유래 (2023)', genre: '모션 그래픽 · 카툰 인포그래픽', role: '기획·드로잉·모션 1인', slot: 'idx-film-jggm', placeholder: '중꺾마의 유래 · 16:9' }
+    ],
+    tall: [
+      { title: 'Pureal 공모전 (2025)', genre: 'AI 영상 공모전 · 숏폼', role: '기획·제작 1인', slot: 'idx-film-pureal', placeholder: 'Pureal · 9:16' },
+      { title: 'The Scent of Page (2024)', genre: '브랜드 AI 영상 시안', role: '기획·제작 1인', slot: 'idx-film-scent', placeholder: 'Scent of Page · 9:16' }
+    ]
+  },
+  design: {
+    label: '디자인 · design',
+    title: '디자인 작업\n전체',
+    note: '포스터와 화면 설계. 결과물과 함께 만든 과정을 남깁니다.',
+    rows: [
+      { title: '미리캔버스 광고 대전 (2025)', genre: '광고 포스터 · 이미지 제작', role: '기획·제작 1인 · 최우수상', slot: 'idx-design-miri', placeholder: '미리캔버스 포스터' },
+      { title: 'BLEBE (2025)', genre: '음악 공유 앱 UI · UX 설계', role: '기획·설계·프로토타이핑 1인', slot: 'idx-design-blebe', placeholder: 'BLEBE 프로토타입' },
+      { title: 'DISCOVERY 잡지 (2019-2021)', genre: '잡지 디자인 · 중국어 번역', role: '편집 부원', slot: 'idx-design-discovery', placeholder: '잡지 지면' }
+    ],
+    tall: []
+  },
+  ai: {
+    label: 'AI · generative',
+    title: 'AI 작업\n전체',
+    note: 'Midjourney, Runway, Nano Banana, Seedance, Hailuo를 제작 공정에 넣어 만든 작업입니다.',
+    rows: [
+      { title: '우유공장 이야기 (2024)', genre: 'AI 단편 애니메이션', role: '기획·제작 1인', slot: 'idx-ai-milk', placeholder: '우유공장 이야기 · 16:9' },
+      { title: 'Pureal 공모전 (2025)', genre: 'AI 영상 공모전 · 숏폼', role: '기획·제작 1인', slot: 'idx-ai-pureal', placeholder: 'Pureal 출품작' },
+      { title: 'The Scent of Page (2024)', genre: '디지털 마케팅 브랜드 AI 영상 시안', role: '기획·제작 1인', slot: 'idx-ai-scent', placeholder: '시안 1 · 시안 2' }
+    ],
+    tall: []
+  }
+};
+
+class Component extends DCLogic {
+  state = { route: null };
+
+  go(key) {
+    this.setState({ route: key });
+    if (typeof window !== 'undefined') window.scrollTo(0, 0);
+  }
+
+  keyOpen(key) {
+    return (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.go(key); } };
+  }
+
+  runSetups() {
+    // setupFall(떨어지는 굿즈 이미지)·setupCursor(커스텀 커서 라벨)는 사용하지 않는다.
+    // 두 기능은 에디터 프리뷰에서만 꺼져 있어 퍼블리시본에서만 나타났으므로 목록에서 제외한다.
+    ['setupReveal', 'setupPlayHint', 'setupTyping', 'setupLoops', 'setupSwap',
+     'setupLinks', 'setupPoster', 'setupBeforeAfter', 'setupLip', 'setupMorph', 'setupCrest', 'setupDither', 'setupFooterTheme'].forEach((k) => {
+      const fn = this[k];
+      if (typeof fn !== 'function') { console.warn('missing setup: ' + k); return; }
+      try { fn.call(this); } catch (e) { console.warn('setup failed: ' + k, e && e.message); }
+    });
+  }
+
+  componentDidMount() { this.runSetups(); this.legacyMount(); }
+  componentDidUpdate() { this.runSetups(); }
+
+  // 섹션 경계 곡선. 기본 형태는 그대로 두고, 스크롤 속도를 스프링으로 받아
+  // 위로 솟은 부분만 더 끌어올린다. 스크롤이 멈추면 기본 형태로 되돌아온다.
+  setupCrest() {
+    if (typeof window === 'undefined') return;
+    const paths = Array.prototype.slice.call(document.querySelectorAll('path[data-crest]'));
+    if (this._crest && this._crest.paths.length === paths.length &&
+        this._crest.paths.every((p) => p.isConnected)) return;
+    if (this._crest) this._crest.stop();
+    if (!paths.length) { this._crest = null; return; }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { this._crest = null; return; }
+
+    const items = paths.map((el) => {
+      const d = el.getAttribute('d') || '';
+      const head = d.split(' L')[0];
+      const pts = (head.match(/-?[\d.]+,-?[\d.]+/g) || []).map((s) => {
+        const v = s.split(',');
+        return { x: parseFloat(v[0]), y: parseFloat(v[1]) };
+      });
+      return { el: el, pts: pts, base: parseFloat(el.getAttribute('data-base')) || 64,
+               gain: parseFloat(el.getAttribute('data-gain')) || 1 };
+    }).filter((it) => it.pts.length >= 4 && (it.pts.length - 1) % 3 === 0);
+    if (!items.length) { this._crest = null; return; }
+
+    let pull = 0, pullV = 0, lastY = window.scrollY || 0, lastT = 0, raf = 0, idle = 0;
+    const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
+
+    const build = (it, k) => {
+      const shift = (p) => {
+        const up = it.base - p.y;
+        let y = up > 0 ? it.base - up * (1 + k * 1.0 * it.gain) : p.y - k * 9 * it.gain;
+        // 하드 컷 대신 무릎을 넣어 눌러준다 — 위로 솟을수록 증가폭이 줄지만 평평해지지 않는다.
+        if (y < -40) y = -40 - Math.pow(-40 - y, 0.72) * 3.2;
+        if (y < -190) y = -190;
+        return p.x.toFixed(1) + ',' + y.toFixed(2);
+      };
+      let d = 'M' + shift(it.pts[0]);
+      for (let i = 1; i < it.pts.length; i += 3) {
+        d += ' C' + shift(it.pts[i]) + ' ' + shift(it.pts[i + 1]) + ' ' + shift(it.pts[i + 2]);
+      }
+      return d + ' L1440,120 L0,120 Z';
+    };
+
+    const tick = (t) => {
+      raf = 0;
+      const dt = lastT ? Math.min(0.032, (t - lastT) / 1000) : 0.016;
+      lastT = t;
+      const y = window.scrollY || 0;
+      const dy = y - lastY;
+      lastY = y;
+      const vel = dy / Math.max(dt, 0.001);
+
+      // 내릴 때 위로 당기고, 올릴 때는 절반만 눌린다. ζ≈0.7 스프링으로 스무스하게.
+      const target = clamp(vel / 950, -0.55, 1.5);
+      pullV += (-84 * (pull - target) - 10 * pullV) * dt;
+      pull += pullV * dt;
+
+      const quiet = Math.abs(pull) < 0.0015 && Math.abs(pullV) < 0.004;
+      idle = quiet ? idle + 1 : 0;
+      if (idle > 2) { raf = requestAnimationFrame(tick); return; }
+      if (quiet) { pull = 0; pullV = 0; }
+
+      const vh = window.innerHeight || 800;
+      for (let i = 0; i < items.length; i++) {
+        const it = items[i];
+        const r = it.el.getBoundingClientRect();
+        if (r.bottom < -260 || r.top > vh + 260) continue;
+        it.el.setAttribute('d', build(it, pull));
+      }
+      raf = requestAnimationFrame(tick);
+    };
+
+    lastT = 0;
+    lastY = window.scrollY || 0;
+    raf = requestAnimationFrame(tick);
+    this._crest = { paths: paths, stop: () => { if (raf) cancelAnimationFrame(raf); raf = 0; } };
+  }
+
+  // 액센트 밴드의 4x4 오더드 디더 패널. 잉크 점만 켜고 배경은 밴드 초록 그대로 둔다.
+  setupDither() {
+    if (typeof window === 'undefined') return;
+    const cv = document.querySelector('canvas[data-dither]');
+    if (this._dither && this._dither.cv === cv && cv && cv.isConnected) return;
+    if (this._dither) this._dither.stop();
+    if (!cv) { this._dither = null; return; }
+
+    const ctx = cv.getContext('2d');
+    const PX = 3;
+    const BAYER = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let img = null, w = 0, h = 0, raf = 0, t0 = 0;
+
+    const size = () => {
+      const r = cv.getBoundingClientRect();
+      const nw = Math.max(8, Math.round(r.width / PX));
+      const nh = Math.max(8, Math.round(r.height / PX));
+      if (nw === w && nh === h) return;
+      w = nw; h = nh;
+      cv.width = w; cv.height = h;
+      img = ctx.createImageData(w, h);
+    };
+
+    // 흐름 필드. 도형 대신 도메인 워프된 노이즈 등고선을 써서 천천히 흐르는 결을 만든다.
+    const field = (x, y, t) => {
+      const ar = w / h;
+      const u = (x / w - 0.5) * ar, v = y / h - 0.5;
+      // 1차 워프 — 좌표 자체를 느리게 휘게 한다.
+      let wx = u + 0.26 * Math.sin(2.3 * v + t * 0.21) + 0.17 * Math.sin(3.7 * u - t * 0.13);
+      let wy = v + 0.22 * Math.cos(2.0 * u - t * 0.17) + 0.14 * Math.sin(3.1 * v + t * 0.11);
+      // 2차 워프 — 결이 서로 얽히도록.
+      const px = wx + 0.12 * Math.sin(5.1 * wy + t * 0.29);
+      const py = wy + 0.12 * Math.cos(4.4 * wx - t * 0.23);
+      let f = 0.5 + 0.5 * Math.sin(7.4 * px + 4.6 * py + t * 0.34);
+      f = f * 0.62 + (0.5 + 0.5 * Math.sin(13.5 * px - 9.2 * py - t * 0.19)) * 0.28
+            + (0.5 + 0.5 * Math.sin(24.0 * py + t * 0.4)) * 0.1;
+      // 가장자리로 갈수록 밀도가 빠져 패널 안에 떠 있는 것처럼 보인다.
+      const r = Math.sqrt((u / (0.78 * ar)) * (u / (0.78 * ar)) + (v / 0.8) * (v / 0.8));
+      const vig = 1 - Math.pow(r > 1 ? 1 : r, 3.2) * 0.72;
+      return f * vig;
+    };
+
+    const draw = (t) => {
+      size();
+      const light = cv.dataset.mode === 'light';
+      const FG = light ? [18, 22, 19] : [43, 238, 75];
+      const BG = light ? [250, 255, 250] : [18, 22, 19];
+      const d = img.data;
+      for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+          const i = (y * w + x) * 4;
+          let f = field(x, y, t);
+          // 중간 밀도를 눌러 등고선 사이에 숨 쉴 틈을 준다.
+          f = f * 1.28 - 0.30;
+          f = f < 0 ? 0 : f > 1 ? 1 : f;
+          const on = f * 16 > BAYER[(x & 3) + ((y & 3) << 2)];
+          d[i] = on ? FG[0] : BG[0];
+          d[i + 1] = on ? FG[1] : BG[1];
+          d[i + 2] = on ? FG[2] : BG[2];
+          d[i + 3] = 255;
+        }
+      }
+      ctx.putImageData(img, 0, 0);
+    };
+
+    const tick = (ts) => {
+      raf = 0;
+      if (!t0) t0 = ts;
+      const r = cv.getBoundingClientRect();
+      const vh = window.innerHeight || 800;
+      if (r.bottom > -200 && r.top < vh + 200) draw((ts - t0) / 1000);
+      raf = requestAnimationFrame(tick);
+    };
+
+    if (reduce) { draw(0); this._dither = { cv: cv, stop: () => {} }; return; }
+    raf = requestAnimationFrame(tick);
+    this._dither = { cv: cv, stop: () => { if (raf) cancelAnimationFrame(raf); raf = 0; } };
+  }
+
+  legacyMount() {}
+
+  // 영상 위에서는 기본 커서를 감추고, 한 줄 설명 + 바로가기 라벨이 스프링으로 따라온다.
+  setupPoster() {
+    if (typeof window === 'undefined' || this.posterBound) return;
+    if (!window.PosterLayers || !document.querySelector('[data-poster-deck]')) return;
+    this.posterBound = true;
+    window.PosterLayers.init({
+      tilt: this.props.posterTilt != null ? this.props.posterTilt : 1,
+      spread: this.props.posterSpread != null ? this.props.posterSpread : 1,
+      animate: true
+    });
+  }
+
+  // Before/After: after 화면이 왼쪽에서 초록 선과 함께 닦여 드러나고, before는 회색으로 물러난다.
+  setupBeforeAfter() {
+    if (typeof window === 'undefined' || this.baBound) return;
+    const pairs = Array.prototype.slice.call(document.querySelectorAll('[data-ba-pair]'));
+    if (!pairs.length) return;
+    this.baBound = true;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let raf = 0;
+    const apply = () => {
+      raf = 0;
+      const vh = window.innerHeight || 1;
+      pairs.forEach((pair) => {
+        const afters = pair.querySelectorAll('[data-ba-after]');
+        const befores = pair.querySelectorAll('[data-ba-before]');
+        const edges = pair.querySelectorAll('[data-ba-edge]');
+        const tick = pair.querySelector('[data-ba-tick]');
+        const r = pair.getBoundingClientRect();
+        let p = reduce ? 1 : (vh * 0.62 - r.top) / Math.max(r.height * 0.45, 1);
+        p = Math.min(Math.max(p, 0), 1);
+        const base = 1 - Math.pow(1 - p, 3);
+        afters.forEach((el, i) => {
+          const e = Math.min(Math.max((base - i * 0.12) / (1 - i * 0.12), 0), 1);
+          el.style.clipPath = 'inset(0 ' + ((1 - e) * 100).toFixed(2) + '% 0 0)';
+          const edge = edges[i];
+          if (edge) {
+            edge.style.left = (e * 100).toFixed(2) + '%';
+            edge.style.opacity = String(e > 0.01 && e < 0.995 ? 1 : 0);
+          }
+        });
+        befores.forEach((el) => {
+          el.style.filter = 'grayscale(' + (base * 0.9).toFixed(2) + ') contrast(' + (1 - base * 0.12).toFixed(2) + ')';
+          el.style.opacity = String(1 - base * 0.35);
+        });
+        if (tick) tick.style.transform = 'scale(' + (0.6 + base * 0.6).toFixed(2) + ')';
+      });
+    };
+    this.onBaScroll = () => { if (!raf) raf = requestAnimationFrame(apply); };
+    window.addEventListener('scroll', this.onBaScroll, { passive: true });
+    window.addEventListener('resize', this.onBaScroll, { passive: true });
+    apply();
+    this.baCleanup = () => {
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', this.onBaScroll);
+      window.removeEventListener('resize', this.onBaScroll);
+    };
+  }
+
+  // Design 글자를 마스크로 삼아 그 안으로 들어가고, 다음 섹션 색면이 화면을 채운다.
+  setupLip() {
+    if (typeof window === 'undefined' || this.lipBound) return;
+    const zone = document.querySelector('[data-lip]');
+    const pin = zone && zone.querySelector('[data-lip-pin]');
+    const word = zone && zone.querySelector('[data-lip-word]');
+    const rest = zone && zone.querySelector('[data-lip-rest]');
+    const target = zone && zone.querySelector('[data-lip-target]');
+    const letters = zone && zone.querySelector('[data-lip-letters]');
+    const tools = zone ? Array.prototype.slice.call(zone.querySelectorAll('[data-tool]')) : [];
+    const core = zone && zone.querySelector('[data-lip-core]');
+    if (!zone || !pin || !word) return;
+    this.lipBound = true;
+    const head = zone.querySelector('[data-lip-head]');
+    let raf = 0;
+    let baseFs = 0;
+    let ratio = 0;   // 글자 폭 / 폰트 크기
+    const clamp01 = (v) => Math.min(Math.max(v, 0), 1);
+    const apply = () => {
+      const zr = zone.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      if (zr.bottom < -vh || zr.top > vh * 2) return;
+      const span = Math.max(zr.height - vh, 1);
+      const p = clamp01(-zr.top / span);
+
+      if (!baseFs) {
+        baseFs = parseFloat(getComputedStyle(head).fontSize) || 64;
+        const tr = (target || word).getBoundingClientRect();
+        ratio = tr.width / baseFs;   // s 한 글자의 폭 비율
+        if (!ratio) return;
+      }
+
+      // 1구간(0~0.34): Design이 도구 아이콘으로 빠르게 갈아치워지다가 다시 Design으로 돌아온다.
+      const SWAP_END = 0.34;
+      if (tools.length) {
+        const q = clamp01(p / SWAP_END);
+        const n = tools.length;
+        // 0.08~0.86 사이를 n+1 칸으로 쪼개, 마지막 칸에서 글자로 복귀한다.
+        const seg = (0.86 - 0.08) / (n + 1);
+        const slot = Math.floor((q - 0.08) / seg);
+        const active = q > 0.08 && q < 0.86 ? Math.min(slot, n - 1) : -1;
+        tools.forEach((el, i) => {
+          const on = i === active;
+          el.style.opacity = on ? '1' : '0';
+          el.style.transform = 'translate(-50%,-50%) scale(' + (on ? 1 : 0.6) + ')';
+        });
+        if (letters) {
+          letters.style.opacity = active >= 0 ? '0' : '1';
+          letters.style.transform = 'scale(' + (active >= 0 ? 0.9 : 1) + ')';
+          letters.style.display = 'inline-block';
+        }
+      }
+
+      // 2구간이 시작되기 전까지는 확대·이동을 잠가둔다.
+      if (p < 0.34) {
+        if (rest) { rest.style.opacity = '1'; rest.style.fontSize = '100%'; }
+        head.style.fontSize = baseFs.toFixed(1) + 'px';
+        head.style.transform = 'none';
+        if (core) core.style.clipPath = 'circle(0px at 50% 50%)';
+        pin.style.background = 'var(--surface-dark-section)';
+        return;
+      }
+      const p2 = clamp01((p - 0.34) / 0.66);
+
+      // 뒷문장이 접히면서 Design이 화면 중앙으로 모인다.
+      const fold = clamp01((p2 - 0.02) / 0.2);
+      if (rest) {
+        rest.style.opacity = String(1 - fold);
+        rest.style.fontSize = ((1 - fold) * 100).toFixed(2) + '%';
+      }
+
+      const pr = pin.getBoundingClientRect();
+      const cxv = pr.left + pr.width / 2;
+      const cyv = pr.top + pr.height / 2;
+      const diag = Math.sqrt(pr.width * pr.width + pr.height * pr.height);
+
+      // 1) 조준을 먼저 끝낸다 — 이동과 확대가 겹치지 않는다.
+      const lock = clamp01((p2 - 0.04) / 0.18);
+
+      // 2) 배율은 font-size 단일 곡선. 거대한 레이어를 만들지 않아 항상 선명하게 렌더된다.
+      const coreBase = baseFs * 0.085;                       // i 점의 대략적인 지름
+      const push = clamp01((p2 - 0.22) / 0.5);
+      const M_MAX = Math.max((diag * 1.25) / Math.max(coreBase * 0.82, 1), 40);
+      const M = Math.exp(Math.pow(push, 1.5) * Math.log(M_MAX));
+      head.style.fontSize = Math.min(baseFs * M, 2600).toFixed(1) + 'px';
+
+      // 3) i 위 점의 중심을 화면 중앙에 고정한다 (확대는 transform이 아니라 조판으로 한다).
+      let tx = 0, ty = 0;
+      if (target) {
+        head.style.transform = 'none';
+        const tr = target.getBoundingClientRect();
+        tx = cxv - (tr.left + tr.width * 0.5);
+        ty = cyv - (tr.top + tr.height * 0.26);
+      }
+      head.style.transform = 'translate(' + (tx * lock).toFixed(1) + 'px,' + (ty * lock).toFixed(1) + 'px)';
+
+      // 4) 흰 면이 그 점에서 원으로 열린다 — 커버리지가 글자 렌더링에 의존하지 않는다.
+      if (core) {
+        const r = lock >= 1 ? (coreBase * 0.41 * M) : 0;
+        // 원의 중심을 i 점의 실측 위치에 맞춘다 (transform 적용 후 다시 읽는다).
+        let cx = pr.width / 2, cy = pr.height / 2;
+        if (target) {
+          const t2 = target.getBoundingClientRect();
+          cx = t2.left + t2.width * 0.5 - pr.left;
+          cy = t2.top + t2.height * 0.23 - pr.top;
+        }
+        core.style.clipPath = 'circle(' + r.toFixed(1) + 'px at ' + cx.toFixed(1) + 'px ' + cy.toFixed(1) + 'px)';
+        core.style.webkitClipPath = core.style.clipPath;
+      }
+    };
+    // 스크롤 이벤트가 아니라 상시 rAF로 돌린다 — 이 페이지에선 이 방식만 확실히 갱신된다.
+    const loop = () => {
+      apply();
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+    this.lipCleanup = () => { if (raf) cancelAnimationFrame(raf); };
+  }
+
+  // 미리캔버스 카드가 스크롤에 따라 AI 대화창 패널로 줄어든다.
+  setupMorph() {
+    if (typeof window === 'undefined' || this.morphBound) return;
+    const zone = document.querySelector('[data-morph]');
+    const card = zone && zone.querySelector('[data-morph-card]');
+    const body = zone && zone.querySelector('[data-morph-body]');
+    const ai = zone && zone.querySelector('[data-morph-ai]');
+    const input = zone && zone.querySelector('[data-ai-input]');
+    const ph = zone && zone.querySelector('[data-ai-ph]');
+    const head = zone && zone.querySelector('[data-morph-head]');
+    const glow = zone && zone.querySelector('[data-morph-glow]');
+    const cap = zone && zone.querySelector('[data-morph-cap]');
+    if (!zone || !card || !body || !ai) return;
+    this.morphBound = true;
+
+    const clamp01 = (v) => Math.min(Math.max(v, 0), 1);
+    const seg = (v, a, b) => clamp01((v - a) / (b - a));
+    const BASE = { w: '100%', maxW: '1320px', h: 'min(78vh,880px)' };
+    let W0 = 0, H0 = 0, fit = 1, raf = 0;
+    // 화면이 도착하면 한 문구가 글자 단위로 blur-in 하고 그대로 고정된다.
+    const LINE = '오늘은 뭘 만들어볼까?';
+    let phPainted = false;
+    const paintLine = () => {
+      if (!ph || phPainted) return;
+      phPainted = true;
+      ph.textContent = '';
+      for (let i = 0; i < LINE.length; i++) {
+        const sp = document.createElement('span');
+        sp.textContent = LINE[i] === ' ' ? '\u00a0' : LINE[i];
+        sp.style.display = 'inline-block';
+        sp.style.opacity = '0';
+        sp.style.filter = 'blur(12px)';
+        sp.style.transform = 'translateY(10px)';
+        sp.style.transition = 'opacity .25s linear, filter .4s linear, transform .45s cubic-bezier(0.16,1,0.3,1)';
+        sp.style.transitionDelay = (i * 0.03).toFixed(3) + 's';
+        ph.appendChild(sp);
+        requestAnimationFrame(() => {
+          sp.style.opacity = '1';
+          sp.style.filter = 'blur(0px)';
+          sp.style.transform = 'translateY(0)';
+        });
+      }
+    };
+
+    const apply = () => {
+      const zr = zone.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      if (zr.bottom < -vh || zr.top > vh * 2) return;
+
+      if (!W0) {
+        card.style.width = BASE.w;
+        card.style.maxWidth = BASE.maxW;
+        card.style.height = BASE.h;
+        body.style.transform = 'translate(-50%,-50%)';
+        W0 = card.offsetWidth;
+        H0 = card.offsetHeight;
+        const bh = body.scrollHeight || 1;
+        fit = Math.min(1, (H0 - 48) / bh);
+        if (!W0) return;
+      }
+
+      const p = clamp01(-zr.top / Math.max(zr.height - vh, 1));
+      const m = seg(p, 0.06, 0.8);
+      const e = m * m * (3 - 2 * m);
+
+      const W1 = Math.min(760, W0);
+      const H1 = Math.min(68, H0);
+      const w = W0 + (W1 - W0) * e;
+      const h = H0 + (H1 - H0) * e;
+      card.style.width = w.toFixed(1) + 'px';
+      card.style.height = h.toFixed(1) + 'px';
+      card.style.maxWidth = 'none';
+      card.style.borderRadius = (14 + 18 * e).toFixed(1) + 'px';
+      card.style.boxShadow = 'inset 0 0 0 1px rgba(255,255,255,' + (0.16 * e).toFixed(3) + '), 0 ' + (18 * e).toFixed(1) + 'px ' + (40 * e).toFixed(1) + 'px -12px rgba(0,0,0,' + (0.5 * e).toFixed(3) + ')';
+
+      const bodyScale = fit * (w / W0);
+      body.style.transform = 'translate(-50%,-50%) scale(' + bodyScale.toFixed(4) + ')';
+      const bodyOut = seg(e, 0.3, 0.62);
+      body.style.opacity = (1 - bodyOut).toFixed(3);
+      if (glow) glow.style.opacity = (1 - seg(e, 0.2, 0.5)).toFixed(3);
+      if (cap) cap.style.opacity = (1 - seg(e, 0.05, 0.35)).toFixed(3);
+
+      const aiIn = seg(e, 0.62, 0.95);
+      ai.style.opacity = aiIn.toFixed(3);
+      ai.style.transform = 'translate(-50%,-50%) scale(' + (0.94 + 0.06 * aiIn).toFixed(4) + ')';
+      ai.style.pointerEvents = 'none';
+      if (aiIn > 0.55) paintLine();
+      if (head) {
+        head.style.opacity = aiIn.toFixed(3);
+        head.style.transform = 'translate(0,calc(-100% - ' + (112 - 14 * (1 - aiIn)).toFixed(1) + 'px))';
+      }
+    };
+
+    const loop = () => { apply(); raf = requestAnimationFrame(loop); };
+    raf = requestAnimationFrame(loop);
+    let rt = 0;
+    const onResize = () => { clearTimeout(rt); rt = setTimeout(() => { W0 = 0; }, 120); };
+    window.addEventListener('resize', onResize);
+    this.morphCleanup = () => {
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener('resize', onResize);
+    };
+  }
+
+  setupMarker() {
+    if (typeof window === 'undefined' || this.markBound) return;
+    const marks = Array.prototype.slice.call(document.querySelectorAll('[data-marker]'));
+    if (!marks.length) return;
+    this.markBound = true;
+
+    const BASE = [250, 255, 250];   // bone white
+    const INK = [18, 22, 19];       // press black
+    const DELAY = 0.28;             // 붓이 닿기까지의 정지
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // remotion spring 재현: 감쇠 조화 진동, 위치를 0→1로 정규화
+    const springAt = (t) => {
+      if (t <= 0) return 0;
+      const k = 100, c = 14, m = 1;
+      const w0 = Math.sqrt(k / m);
+      const z = c / (2 * Math.sqrt(k * m));
+      if (z < 1) {
+        const wd = w0 * Math.sqrt(1 - z * z);
+        return 1 - Math.exp(-z * w0 * t) * (Math.cos(wd * t) + (z * w0 / wd) * Math.sin(wd * t));
+      }
+      return 1 - Math.exp(-w0 * t) * (1 + w0 * t);
+    };
+
+    const mix = (a, b, p) => 'rgb(' +
+      Math.round(a[0] + (b[0] - a[0]) * p) + ',' +
+      Math.round(a[1] + (b[1] - a[1]) * p) + ',' +
+      Math.round(a[2] + (b[2] - a[2]) * p) + ')';
+
+    const items = marks.map((el) => ({ el: el, t0: 0, on: false }));
+    let raf = 0;
+
+    const paint = (it, now) => {
+      const t = Math.max((now - it.t0) / 1000 - DELAY, 0);
+      const s = reduce ? 1 : springAt(t);
+      const p = Math.min(Math.max((s - 0.5) / 0.3, 0), 1);
+      it.el.style.setProperty('--mk', s.toFixed(4));
+      it.el.style.setProperty('--mk-ink', mix(BASE, INK, p));
+      return t < 2.2;
+    };
+
+    const tick = () => {
+      const now = performance.now();
+      let live = false;
+      items.forEach((it) => { if (it.on && paint(it, now)) live = true; });
+      raf = live ? requestAnimationFrame(tick) : 0;
+    };
+
+    const check = () => {
+      const vh = window.innerHeight || 1;
+      items.forEach((it) => {
+        const r = it.el.getBoundingClientRect();
+        const visible = r.top < vh * 0.85 && r.bottom > vh * 0.05;
+        if (visible && !it.on) {
+          it.on = true;
+          it.t0 = performance.now();
+          if (!raf) raf = requestAnimationFrame(tick);
+        } else if (!visible && it.on) {
+          // 지나갔다 돌아오면 다시 그어진다.
+          it.on = false;
+          it.el.style.setProperty('--mk', '0');
+          it.el.style.setProperty('--mk-ink', mix(BASE, INK, 0));
+        }
+      });
+    };
+
+    this.onMarkScroll = () => { check(); };
+    window.addEventListener('scroll', this.onMarkScroll, { passive: true, capture: true });
+    window.addEventListener('resize', this.onMarkScroll, { passive: true });
+    check();
+    this.markCleanup = () => {
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', this.onMarkScroll, { capture: true });
+      window.removeEventListener('resize', this.onMarkScroll);
+    };
+  }
+
+  // 푸터 라이트/다크 전환. 스트리밍을 막지 않도록 홀 대신 직접 인라인 스타일을 쓴다.
+  setupFooterTheme() {
+    if (typeof window === 'undefined') return;
+    const root = document.querySelector('[data-fx-root]');
+    if (!root || root.hasAttribute('data-fx-bound')) return;
+    root.setAttribute('data-fx-bound', '1');
+
+    const P = {
+      dark:  { bg: '#121613', ink: '#fafffa', muted: '#c8d2c8', rule: '#232924' },
+      light: { bg: '#fafffa', ink: '#121613', muted: '#516254', rule: '#c4e4c9' }
+    };
+    const apply = (mode) => {
+      const p = P[mode] || P.dark;
+      root.setAttribute('data-mode', mode);
+      root.style.background = p.bg;
+      root.querySelectorAll('[data-fx-ink]').forEach((el) => { el.style.color = p.ink; });
+      root.querySelectorAll('[data-fx-muted]').forEach((el) => { el.style.color = p.muted; });
+      root.querySelectorAll('[data-fx-rule]').forEach((el) => { el.style.borderTopColor = p.rule; });
+      root.querySelectorAll('[data-fx-rule-border]').forEach((el) => { el.style.borderColor = p.rule; });
+      const sun = root.querySelector('[data-fx-icon="sun"]');
+      const moon = root.querySelector('[data-fx-icon="moon"]');
+      if (sun) sun.style.display = mode === 'dark' ? 'block' : 'none';
+      if (moon) moon.style.display = mode === 'dark' ? 'none' : 'block';
+      const cv = root.querySelector('canvas[data-dither]');
+      if (cv) cv.dataset.mode = mode;
+    };
+    const btn = root.querySelector('[data-fx-toggle]');
+    if (btn) btn.addEventListener('click', () => {
+      apply(root.getAttribute('data-mode') === 'dark' ? 'light' : 'dark');
+    });
+    apply(root.getAttribute('data-mode') || 'dark');
+  }
+
+  // 링크 이동은 커스텀 커서와 분리한다 — 에디터·터치에서도 눌리게.
+  setupLinks() {
+    if (typeof window === 'undefined' || this.linksBound) return;
+    this.linksBound = true;
+    // 리마운트·핫리로드로 인스턴스가 늘어나도 document 리스너는 항상 하나만 남긴다.
+    if (document.__pfLinkClick) document.removeEventListener('click', document.__pfLinkClick);
+    this.linkClick = (e) => {
+      if (e.__pfLinkHandled) return;
+      const el = e.target && e.target.closest ? e.target.closest('[data-cursor-link]') : null;
+      if (!el) return;
+      const href = el.getAttribute('data-cursor-link');
+      if (!href) return;
+      e.__pfLinkHandled = true;
+      // 같은 링크가 700ms 안에 다시 열리려 하면 중복 클릭·중복 리스너로 보고 무시한다.
+      const now = Date.now();
+      if (window.__pfLastOpen && window.__pfLastOpen.href === href && now - window.__pfLastOpen.t < 700) return;
+      window.__pfLastOpen = { href: href, t: now };
+      window.open(href, '_blank', 'noopener');
+    };
+    document.__pfLinkClick = this.linkClick;
+    document.addEventListener('click', this.linkClick);
+  }
+
+  setupCursor() {
+    if (typeof window === 'undefined' || this.curBound || this.inEditor) return;
+    if (!document.querySelector('[data-cursor-link]')) return;
+    if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
+    this.curBound = true;
+
+    const layer = document.createElement('div');
+    layer.setAttribute('aria-hidden', 'true');
+    layer.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:80;opacity:0;transition:opacity 240ms cubic-bezier(0.16,1,0.3,1)';
+    layer.innerHTML =
+      '<div data-cur-dot style="position:absolute;top:0;left:0;width:22px;height:22px;transform:translate3d(-100px,-100px,0) scale(0);transform-origin:0 0;transition:transform 240ms cubic-bezier(0.16,1,0.3,1)">' +
+      '<svg viewBox="0 0 40 40" style="width:100%;height:100%;display:block;fill:var(--color-accent);filter:drop-shadow(0 1px 6px rgba(16,94,29,.45))">' +
+      '<path d="M1.8 4.4 7 36.2c.3 1.8 2.6 2.3 3.6.8l3.9-5.7c1.7-2.5 4.5-4.1 7.5-4.3l6.9-.5c1.8-.1 2.5-2.4 1.1-3.5L5 2.5c-1.4-1.1-3.5 0-3.3 1.9Z"></path></svg></div>' +
+      '<div data-cur-label class="micro-label" style="position:absolute;top:0;left:0;white-space:nowrap;background:var(--color-accent);color:var(--color-typesetter-ink);padding:var(--spacing-10) var(--spacing-20);border-radius:var(--radius-buttons);box-shadow:var(--shadow-lg);transform:translate3d(-100px,-100px,0) scale(0);transform-origin:0 0;transition:transform 240ms cubic-bezier(0.16,1,0.3,1)"></div>';
+    document.body.appendChild(layer);
+    this.curLayer = layer;
+
+    const dot = layer.querySelector('[data-cur-dot]');
+    const label = layer.querySelector('[data-cur-label]');
+    let tx = 0, ty = 0, lx = 0, ly = 0, raf = 0, on = false;
+
+    const tick = () => {
+      lx += (tx + 18 - lx) * 0.18;
+      ly += (ty + 20 - ly) * 0.18;
+      dot.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0) scale(1)';
+      label.style.transform = 'translate3d(' + lx + 'px,' + ly + 'px,0) scale(1)';
+      raf = on ? requestAnimationFrame(tick) : 0;
+    };
+
+    const move = (e) => { tx = e.clientX; ty = e.clientY; };
+
+    const enter = (el) => (e) => {
+      on = true;
+      label.textContent = el.getAttribute('data-cursor-note') || '';
+      tx = e.clientX; ty = e.clientY;
+      lx = tx + 18; ly = ty + 20;
+      layer.style.opacity = '1';
+      if (!raf) raf = requestAnimationFrame(tick);
+    };
+
+    const leave = () => {
+      on = false;
+      layer.style.opacity = '0';
+      dot.style.transform = dot.style.transform.replace('scale(1)', 'scale(0)');
+      label.style.transform = label.style.transform.replace('scale(1)', 'scale(0)');
+    };
+
+    this.curTargets = [];
+    document.querySelectorAll('[data-cursor-link]').forEach((el) => {
+      const href = el.getAttribute('data-cursor-link');
+      const onEnter = enter(el);
+      el.addEventListener('mouseenter', onEnter);
+      el.addEventListener('mousemove', move);
+      el.addEventListener('mouseleave', leave);
+      this.curTargets.push([el, onEnter, null]);
+    });
+
+    this.curCleanup = () => {
+      on = false;
+      if (raf) cancelAnimationFrame(raf);
+      (this.curTargets || []).forEach(([el, onEnter, onClick]) => {
+        el.removeEventListener('mouseenter', onEnter);
+        el.removeEventListener('mousemove', move);
+        el.removeEventListener('mouseleave', leave);
+        el.removeEventListener('click', onClick);
+      });
+      if (layer.parentNode) layer.parentNode.removeChild(layer);
+    };
+  }
+
+  // 검은 구간에 닿으면 그린 에셋들이 화면 위에서 후두둑 떨어진다.
+  // 화면 안의 텍스트·영상 사각형과 충돌해 튕기고, 수초 뒤 사라진다.
+  // 편집 프리뷰(임베드) 안에서는 body에 붙는 오버레이가 에디터 선택을 막으므로 끄다.
+  get inEditor() {
+    try { return window.top !== window.self; } catch (e) { return true; }
+  }
+
+  setupFall() {
+    if (typeof window === 'undefined' || this.fallBound || this.inEditor) return;
+    const zone = document.querySelector('[data-fall-zone]');
+    if (!zone) return;
+    this.fallBound = true;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const SIZE = 84;
+    const R = SIZE * 0.42;
+    const layer = document.createElement('div');
+    layer.setAttribute('aria-hidden', 'true');
+    layer.style.cssText = 'position:fixed;inset:0;pointer-events:none;user-select:none;overflow:hidden;z-index:5;contain:strict';
+    layer.setAttribute('data-om-ignore', '');
+    layer.setAttribute('data-fall-layer', '');
+    document.body.appendChild(layer);
+    this.fallLayer = layer;
+
+    const srcs = ['shirt-1', 'shirt-2', 'shirt-3', 'shirt-4', 'shirt-5', 'shirt-6', 'trophy', 'char-1', 'char-2', 'char-3', 'char-smile', 'emblem-1', 'emblem-4', 'emblem-geng2']
+      .map((n) => 'media/drop/' + n + '.png');
+    const parts = [];
+    let raf = 0;
+    let last = 0;
+    let timers = [];
+    let obs = [];
+    let frame = 0;
+
+    const readObstacles = () => {
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      obs = [];
+      document.querySelectorAll('h1, h2, [data-phys-solid], video[data-loop], image-slot').forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.width < 48 || r.height < 24) return;
+        if (r.bottom < 0 || r.top > vh || r.right < 0 || r.left > vw) return;
+        obs.push(r);
+      });
+    };
+
+    const collide = (p) => {
+      for (let k = 0; k < obs.length; k++) {
+        const r = obs[k];
+        const cx = Math.max(r.left, Math.min(p.x, r.right));
+        const cy = Math.max(r.top, Math.min(p.y, r.bottom));
+        let dx = p.x - cx;
+        let dy = p.y - cy;
+        let d = Math.sqrt(dx * dx + dy * dy);
+        if (d > R) continue;
+        if (d < 0.001) { dx = 0; dy = -1; d = 1; }
+        const nx = dx / d;
+        const ny = dy / d;
+        p.x += nx * (R - d);
+        p.y += ny * (R - d);
+        const vn = p.vx * nx + p.vy * ny;
+        if (vn >= 0) continue;
+        const e = 0.45;
+        p.vx -= (1 + e) * vn * nx;
+        p.vy -= (1 + e) * vn * ny;
+        const tx = -ny;
+        const ty = nx;
+        const vt = p.vx * tx + p.vy * ty;
+        p.vx -= vt * 0.18 * tx;
+        p.vy -= vt * 0.18 * ty;
+        p.vr += vt * 0.55;
+      }
+    };
+
+    const step = (now) => {
+      const dt = Math.min((now - last) / 1000, 0.033);
+      last = now;
+      if (frame++ % 5 === 0) readObstacles();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      for (let i = parts.length - 1; i >= 0; i--) {
+        const p = parts[i];
+        p.life += dt;
+        p.vy += 1700 * dt;
+        p.x += p.vx * dt;
+        p.y += p.vy * dt;
+        p.r += p.vr * dt;
+        p.vr *= 0.995;
+        collide(p);
+        if (p.x < R) { p.x = R; p.vx = Math.abs(p.vx) * 0.5; }
+        else if (p.x > vw - R) { p.x = vw - R; p.vx = -Math.abs(p.vx) * 0.5; }
+        const fade = p.life > p.ttl ? Math.max(0, 1 - (p.life - p.ttl) / 0.8) : 1;
+        p.el.style.transform = 'translate3d(' + (p.x - SIZE / 2) + 'px,' + (p.y - SIZE / 2) + 'px,0) rotate(' + p.r + 'deg)';
+        p.el.style.opacity = String(fade);
+        if (fade <= 0 || p.y > vh + 400) { p.el.remove(); parts.splice(i, 1); }
+      }
+      raf = parts.length ? requestAnimationFrame(step) : 0;
+      // 마지막 에셋까지 사라지면 오버레이 자체를 문서에서 빼 편집을 막지 않게 한다.
+      if (!raf && !timers.length && layer.parentNode) layer.parentNode.removeChild(layer);
+    };
+
+    const spawn = () => {
+      const vw = window.innerWidth;
+      const mask = document.querySelector('[data-fall-mask]');
+      const mr = mask && mask.getBoundingClientRect();
+      // 검은 면 뒤에서 태어나 물결선 아래로 빠져나온다.
+      const originY = mr
+        ? Math.max(-R - 40, Math.min(mr.bottom, window.innerHeight) - 120 - Math.random() * 260)
+        : -R - Math.random() * 320;
+      const el = document.createElement('img');
+      el.src = srcs[(Math.random() * srcs.length) | 0];
+      el.alt = '';
+      el.style.cssText = 'position:absolute;top:0;left:0;width:' + SIZE + 'px;height:' + SIZE + 'px;object-fit:contain;pointer-events:none;will-change:transform,opacity';
+      layer.appendChild(el);
+      parts.push({
+        el: el,
+        x: R + Math.random() * Math.max(vw - R * 2, 1),
+        y: originY,
+        vx: (Math.random() - 0.5) * 46,
+        vy: 40 + Math.random() * 110,
+        r: Math.random() * 360,
+        vr: (Math.random() - 0.5) * 190,
+        life: 0,
+        ttl: 3.4 + Math.random() * 2
+      });
+      if (!raf) { last = performance.now(); readObstacles(); raf = requestAnimationFrame(step); }
+    };
+
+    const burst = () => {
+      timers.forEach(clearTimeout);
+      timers = [];
+      for (let i = 0; i < 18; i++) {
+        timers.push(setTimeout(() => {
+          timers.shift();
+          spawn();
+        }, i * 105 + Math.random() * 110));
+      }
+    };
+
+    const check = () => {
+      if (this.fallDone) return;
+      const z = document.querySelector('[data-fall-zone]');
+      if (!z) return;
+      const r = z.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.75 && r.bottom > 0) {
+        this.fallDone = true;
+        window.removeEventListener('scroll', check, { capture: true });
+        burst();
+      }
+    };
+    this.fallCheck = check;
+    window.addEventListener('scroll', check, { passive: true, capture: true });
+    check();
+    this.fallCleanup = () => {
+      timers.forEach(clearTimeout);
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', check, { capture: true });
+    };
+  }
+
+  setupSwap() {
+    const track = document.querySelector('[data-swap-track]');
+    if (!track || this.swapBound) return;
+    this.swapBound = true;
+
+    const nodes = Array.from(track.querySelectorAll('[data-swap]'));
+    const segs = Array.from(track.querySelectorAll('[data-swap-seg]'));
+    const count = nodes.reduce((m, el) => Math.max(m, parseInt(el.getAttribute('data-swap'), 10) + 1), 0);
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const setOpacity = (el, v) => {
+      const min = parseFloat(el.getAttribute('data-swap-min') || '0');
+      el.style.opacity = String(min + (1 - min) * v);
+    };
+    const smooth = (t) => (t <= 0 ? 0 : t >= 1 ? 1 : t * t * (3 - 2 * t));
+
+    if (reduce) {
+      nodes.forEach((el) => setOpacity(el, parseInt(el.getAttribute('data-swap'), 10) === 0 ? 1 : 0));
+      segs.forEach((s) => { s.style.transform = 'scaleX(0)'; });
+      return;
+    }
+
+    const apply = () => {
+      this.swapRaf = 0;
+      const r = track.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      const span = Math.max(r.height - vh, 1);
+      const p = Math.min(Math.max(-r.top / span, 0), 1);
+      this.swapVisible = r.top < vh && r.bottom > 0;
+      // 스크럽으로 끌다가 임계점을 넘기면 나머지는 릴스처럼 알아서 넘어간다.
+      const t = clamp01((p - 0.34) / 0.32);
+      if (!this.snapInit) {
+        this.snapInit = true;
+        this.snapIdx = t > 0.34 ? 1 : 0;
+        this.rendered = this.snapIdx === 1 ? 1 : t;
+      } else if (!this.snapping) {
+        if (this.snapIdx === 0 && t > 0.34) startSnap(1);
+        else if (this.snapIdx === 1 && t < 0.24) startSnap(0);
+        else this.rendered = this.snapIdx === 0 ? Math.min(t, 0.34) : 1;
+      }
+      paint(this.rendered * (count - 1));
+    };
+
+    const clamp01 = (v) => Math.min(Math.max(v, 0), 1);
+
+    const startSnap = (to) => {
+      this.snapping = true;
+      this.snapFrom = this.rendered;
+      this.snapTo = to;
+      this.snapT0 = (window.performance || Date).now();
+      this.snapIdx = to;
+      tick();
+    };
+
+    const tick = () => {
+      const e = clamp01((((window.performance || Date).now()) - this.snapT0) / 560);
+      const k = 1 - Math.pow(1 - e, 3);
+      this.rendered = this.snapFrom + (this.snapTo - this.snapFrom) * k;
+      if (e >= 1) this.snapping = false;
+      paint(this.rendered * (count - 1));
+      if (e < 1) this.snapAnim = requestAnimationFrame(tick);
+    };
+
+    const paint = (local) => {
+      nodes.forEach((el) => {
+        const i = parseInt(el.getAttribute('data-swap'), 10);
+        const d = local - i;
+        const a = Math.abs(d);
+        if (el.hasAttribute('data-swap-slide')) {
+          // 릴스처럼 한 화면씩 위로 밀린다 — 페이드 없이 불투명하게.
+          el.style.transform = 'translateY(' + (-d * 100) + '%)';
+          el.style.opacity = a >= 1 ? '0' : '1';
+          const v = el.querySelector('video[data-swap-video]');
+          if (v) {
+            // 넘어가는 중엔 멈춰 있고, 자리에 완전히 안착했을 때만 처음부터 재생한다.
+            if (!this.snapping && a < 0.02 && this.swapVisible) {
+              if (v.paused) { const q = v.play(); if (q && q.catch) q.catch(() => {}); }
+            } else {
+              if (!v.paused) v.pause();
+              if (a > 0.5 && v.currentTime > 0.05) v.currentTime = 0;
+            }
+          }
+          return;
+        }
+        // 두 레이어의 투명도 합이 항상 1 — 걹쳐 이중으로 읽히지 않는다.
+        setOpacity(el, smooth(clamp01((clamp01(1 - a) - 0.5) / 0.34 + 0.5)));
+        if (el.hasAttribute('data-swap-fly')) {
+          // 캡션은 영상과 같은 방향으로, 줄마다 조금씩 늦게 따라 올라온다.
+          const kids = el.children;
+          for (let j = 0; j < kids.length; j++) {
+            kids[j].style.transform = 'translateY(' + (-d * (22 + j * 14)) + 'px)';
+          }
+        }
+        if (el.hasAttribute('data-swap-scale')) {
+          el.style.transform = 'translateY(' + (-d * 7) + '%) scale(' + (1 - 0.05 * Math.min(a, 1)) + ')';
+        }
+      });
+      segs.forEach((s) => {
+        const i = parseInt(s.getAttribute('data-swap-seg'), 10);
+        s.style.transform = 'scaleX(' + clamp01(local - i) + ')';
+      });
+    };
+
+    this.onSwapScroll = () => {
+      if (this.swapRaf) return;
+      this.swapRaf = requestAnimationFrame(apply);
+    };
+    window.addEventListener('scroll', this.onSwapScroll, { passive: true, capture: true });
+    window.addEventListener('resize', this.onSwapScroll, { passive: true });
+    apply();
+  }
+  componentWillUnmount() {
+    if (this.io) this.io.disconnect();
+    if (this.playIo) this.playIo.disconnect();
+    if (this.onSwapScroll) {
+      window.removeEventListener('scroll', this.onSwapScroll, { capture: true });
+      window.removeEventListener('resize', this.onSwapScroll);
+    }
+    if (this.swapRaf) cancelAnimationFrame(this.swapRaf);
+    if (this.snapAnim) cancelAnimationFrame(this.snapAnim);
+    if (this.linkClick) {
+      document.removeEventListener('click', this.linkClick);
+      if (document.__pfLinkClick === this.linkClick) document.__pfLinkClick = null;
+    }
+    if (this.fallCleanup) this.fallCleanup();
+    if (this.curCleanup) this.curCleanup();
+    if (this.baCleanup) this.baCleanup();
+    if (this.lipCleanup) this.lipCleanup();
+    if (this.fallLayer && this.fallLayer.parentNode) this.fallLayer.parentNode.removeChild(this.fallLayer);
+  }
+
+  // 썸네일 자리에 짧은 루프 영상. media/*.mp4 파일이 있으면 페이드인되고,
+  // 없으면 드롭 슬롯이 그대로 남는다.
+  setupLoops() {
+    if (typeof window === 'undefined') return;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!this.playIo) {
+      this.playIo = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          const v = e.target;
+          if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+          else v.pause();
+        });
+      }, { threshold: 0.2 });
+    }
+    document.querySelectorAll('video[data-loop]:not([data-loop-init])').forEach((v) => {
+      v.setAttribute('data-loop-init', '1');
+      v.muted = true;
+      v.loop = true;
+      v.playsInline = true;
+      v.setAttribute('playsinline', '');
+      if (reduce) return;
+      v.addEventListener('loadeddata', () => {
+        v.style.opacity = '1';
+        // 스와이프 프레임 안의 영상은 스크롤 스냅 로직이 직접 재생을 제어한다.
+        if (!v.hasAttribute('data-swap-video')) this.playIo.observe(v);
+      });
+      v.addEventListener('error', () => { v.style.opacity = '0'; });
+      v.src = v.getAttribute('data-loop');
+    });
+  }
+
+  // [data-typing] 텍스트를 화면에 들어올 때 한 글자씩 찍는다 (한 번만).
+  setupTyping() {
+    if (typeof window === 'undefined') return;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('[data-typing]:not([data-typing-armed])').forEach((el) => {
+      el.setAttribute('data-typing-armed', '1');
+      const full = el.getAttribute('data-typing') || '';
+      if (reduce) { el.textContent = full; return; }
+      el.textContent = '';
+      const chars = Array.from(full);
+      const run = () => {
+        let i = 0;
+        const step = () => {
+          if (i >= chars.length) return;
+          el.textContent += chars[i++];
+          this._typeTimer = setTimeout(step, 90);
+        };
+        this._typeTimer = setTimeout(step, 320);
+      };
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.9) { run(); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          io.disconnect();
+          run();
+        });
+      }, { threshold: 0.4 });
+      io.observe(el);
+    });
+  }
+
+  // 영상 카드가 처음 화면에 들어올 때 클릭 안내를 한 번만 잠깐 띄운다.
+  setupPlayHint() {
+    if (typeof window === 'undefined') return;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('[data-play-hint]:not([data-hint-armed])').forEach((el) => {
+      el.setAttribute('data-hint-armed', '1');
+      if (reduce) return;
+      const fire = () => {
+        el.style.animation = 'playHint 6200ms cubic-bezier(0.16,1,0.3,1) 400ms forwards';
+      };
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.85) { fire(); return; }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          io.disconnect();
+          fire();
+        });
+      }, { threshold: 0.35 });
+      io.observe(el);
+    });
+  }
+
+  setupReveal() {
+    if (typeof window === 'undefined') return;
+    if (this.props.revealMotion === false) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!this.io) {
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          this.io.unobserve(e.target);
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+    }
+    document.querySelectorAll('[data-reveal]:not([data-revealed])').forEach((n, i) => {
+      n.setAttribute('data-revealed', '1');
+      const delay = (i % 3) * 70;
+      n.style.transition = 'opacity 600ms cubic-bezier(0.16,1,0.3,1) ' + delay + 'ms, transform 600ms cubic-bezier(0.16,1,0.3,1) ' + delay + 'ms';
+      if (n.getBoundingClientRect().top < window.innerHeight * 0.92) return;
+      n.style.opacity = '0';
+      n.style.transform = 'translateY(28px)';
+      this.io.observe(n);
+    });
+  }
+
+  renderVals() {
+    const key = this.state.route;
+    const section = key ? SECTIONS[key] : null;
+    return {
+      isHome: key == null,
+      active: section ? { ...section, hasTall: section.tall.length > 0 } : null,
+      openFilm: () => this.go('film'),
+      openDesign: () => this.go('design'),
+      openAi: () => this.go('ai'),
+      onFilmKey: this.keyOpen('film'),
+      onDesignKey: this.keyOpen('design'),
+      onAiKey: this.keyOpen('ai'),
+      closeIndex: () => this.go(null),
+      onCloseKey: this.keyOpen(null),
+      showBand: this.props.showAccentBand ?? true,
+      heroLift: this.state.heroLift ? 1 : 0,
+      liftOn: () => this.setState({ heroLift: true }),
+      liftOff: () => this.setState({ heroLift: false })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

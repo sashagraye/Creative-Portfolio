@@ -1,0 +1,323 @@
+/* ============================================================
+   tokens.css
+   Base: New Form — Style Reference ("editorial broadsheet in a green room")
+   Overrides: 한글 대응 (폰트 교체 + 디스플레이 스케일 재설계)
+
+   수정은 전부 이 파일에서만 한다.
+   컴포넌트 CSS 안에 색·크기 값을 직접 박지 않는다.
+   ============================================================ */
+
+/* ---- 폰트 로드 ---------------------------------------------
+   원문 3종(TWK Lausanne / PP Mondwest / Editorial New)은
+   전부 유료 라이선스이며 한글 글리프가 없어 사용 불가.
+   Pretendard(전역) + Instrument Serif(라틴 포인트)로 대체.
+   Editorial New는 사용하지 않는다 (디스플레이 서체 2종으로 축소).
+------------------------------------------------------------ */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  /* ==========================================================
+     COLORS — 원문 그대로 유지
+     액센트는 --color-accent 한 곳에서만 바꾼다.
+     ========================================================== */
+  --color-bone-white:        #fafffa;  /* 캔버스. 순백 #ffffff 금지 */
+  --color-press-black:       #121613;
+  --color-typesetter-ink:    #000000;
+  --color-slate-verdant:     #232924;
+  --color-newsprint-gray:    #516254;
+  --color-muted-sage:        #c8d2c8;
+  --color-highlighter-green: #2bee4b;
+  --color-shadow-moss:       #93b799;
+  --color-echo-green:        #c4e4c9;
+
+  /* 액센트 단일 진입점 — 여기만 바꾸면 전 페이지가 따라온다.
+     인디고 전환 시: #3538CD */
+  --color-accent: var(--color-highlighter-green);
+
+  /* ==========================================================
+     TYPOGRAPHY — FONT FAMILIES
+     ========================================================== */
+  /* 전역. 한글·라틴 모두 이것을 쓴다. */
+  --font-sans: 'Pretendard Variable', Pretendard, -apple-system,
+               BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  /* 라틴 전용 포인트 서체. 한글에 절대 적용하지 않는다.
+     워드마크, 섹션 넘버, 영문 단독 헤드라인에만. */
+  --font-display-latin: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+
+  /* 원문 토큰명 호환 — 전부 --font-sans로 수렴 */
+  --font-twk-lausanne:  var(--font-sans);
+  --font-times:         var(--font-sans);
+  --font-pp-mondwest:   var(--font-display-latin);
+
+  /* ==========================================================
+     TYPOGRAPHY — WEIGHTS
+     원문 550은 Pretendard에 없으므로 600으로 매핑
+     ========================================================== */
+  --font-weight-extralight: 200;
+  --font-weight-light:      300;
+  --font-weight-w350:       350;
+  --font-weight-regular:    400;
+  --font-weight-w550:       600;
+  --font-weight-semibold:   600;
+
+  /* ==========================================================
+     TYPE SCALE — 본문/UI (원문 유지)
+     본문은 18px를 넘기지 않는다.
+     ========================================================== */
+  --text-caption:      11px;
+  --leading-caption:   1.1;
+  --tracking-caption:  0.11px;
+
+  --text-body-sm:      14px;
+  --leading-body-sm:   1.4;   /* 원문 1.1 → 한글 가독성 위해 완화 */
+  --tracking-body-sm:  0;
+
+  --text-body:         18px;
+  --leading-body:      1.6;   /* 원문 1.0 → 한글 본문은 1.6 이상 필요 */
+  --tracking-body:     -0.01em;
+
+  /* ==========================================================
+     DISPLAY SCALE — 한글 (기본값)
+     한글은 정사각 모듈이라 원문 값(295px / 0.9 / -0.04em)을 쓰면
+     1400px 안에 4~5자밖에 안 들어가고 받침이 윗줄에 붙는다.
+     크기 대신 "한 줄 5~7자 × 3~4줄"로 타이포그래피 벽을 만든다.
+     ========================================================== */
+  --text-ko-sub:         44px;
+  --leading-ko-sub:      1.15;
+  --tracking-ko-sub:     -0.02em;
+
+  --text-ko-heading:     64px;
+  --leading-ko-heading:  1.1;
+  --tracking-ko-heading: -0.02em;
+
+  --text-ko-display:     96px;
+  --leading-ko-display:  1.08;
+  --tracking-ko-display: -0.02em;
+
+  /* 히어로 전용 최대치. 이 이상 키우지 않는다. */
+  --text-ko-hero:        140px;
+  --leading-ko-hero:     1.05;
+  --tracking-ko-hero:    -0.02em;
+
+  /* ==========================================================
+     DISPLAY SCALE — 라틴 (Instrument Serif 전용)
+     여기서만 원문의 극단적 스케일을 그대로 쓴다.
+     ========================================================== */
+  --text-subheading:      60px;
+  --leading-subheading:   0.9;
+  --tracking-subheading:  -0.04em;
+
+  --text-heading-sm:      72px;
+  --leading-heading-sm:   1;
+  --tracking-heading-sm:  -0.02em;
+
+  --text-heading:         96px;
+  --leading-heading:      1;
+  --tracking-heading:     -0.02em;
+
+  --text-heading-lg:      155px;
+  --leading-heading-lg:   1;
+  --tracking-heading-lg:  -0.04em;
+
+  --text-display:         295px;
+  --leading-display:      0.9;
+  --tracking-display:     -0.04em;
+
+  /* ==========================================================
+     SPACING — 원문 그대로
+     ========================================================== */
+  --spacing-4:   4px;
+  --spacing-8:   8px;
+  --spacing-10:  10px;
+  --spacing-15:  15px;
+  --spacing-20:  20px;
+  --spacing-25:  25px;
+  --spacing-30:  30px;
+  --spacing-32:  32px;
+  --spacing-35:  35px;
+  --spacing-40:  40px;
+  --spacing-45:  45px;
+  --spacing-50:  50px;
+  --spacing-55:  55px;
+  --spacing-60:  60px;
+  --spacing-120: 120px;
+  --spacing-190: 190px;
+
+  /* ==========================================================
+     LAYOUT — 원문 그대로. 1400px 초과 금지.
+     ========================================================== */
+  --page-max-width: 1400px;
+  --section-gap:    80px;
+  --card-padding:   0px;
+  --element-gap:    20px;
+
+  /* ==========================================================
+     RADIUS — 원문 그대로
+     primary action에 pill(9999px) 금지.
+     ========================================================== */
+  --radius-md:      5px;
+  --radius-lg:      10px;
+  --radius-xl:      14px;
+  --radius-full:    9999px;
+
+  --radius-pills:   10px;
+  --radius-round:   9999px;
+  --radius-images:  14px;
+  --radius-buttons: 5px;
+
+  /* ==========================================================
+     SHADOWS — primary action 버튼에만 사용.
+     카드·섹션에 box-shadow 금지.
+     ========================================================== */
+  --shadow-lg:   rgba(16, 94, 29, 0.45) 1px 8px 20px 0px;
+  --shadow-lg-2: rgba(18, 146, 39, 0.25) 1px 8px 20px 0px;
+
+  /* ==========================================================
+     BORDERS — 원문에 없음. 헤어라인과 워드마크 밑줄만.
+     ========================================================== */
+  --border-hairline:      1px;
+  --border-wordmark-rule: 2px;
+
+  /* ==========================================================
+     COMPONENT — HERO
+     사진 타일 크기. 그리드가 아니라 헤드라인 줄 사이 인라인 삽입용.
+     ========================================================== */
+  --hero-tile-w:     200px;
+  --hero-tile-h:     140px;
+  --hero-tile-w-sm:  148px;
+  --hero-tile-h-sm:  104px;
+
+  --hero-pad-top:    var(--spacing-60);
+  --hero-pad-bottom: var(--spacing-120);
+  --nav-pad-y:       var(--spacing-30);
+  --gutter:          var(--spacing-50);
+
+  /* ==========================================================
+     SURFACES
+     ========================================================== */
+  --surface-canvas:       var(--color-bone-white);
+  --surface-dark-section: var(--color-press-black);
+  --surface-accent-band:  var(--color-accent);
+
+  /* ==========================================================
+     IMAGE FILTER
+     모든 사진에 동일 적용. 풀컬러 이미지 금지.
+     ========================================================== */
+  --filter-duotone: grayscale(1) saturate(1) invert(0.27) sepia(0.07)
+                    saturate(10.67) hue-rotate(80deg)
+                    brightness(1.02) contrast(0.83); /* @kind other */
+
+  /* ==========================================================
+     MOTION — 원문에 없음. 직접 정의.
+     ========================================================== */
+  --ease-out-editorial: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --duration-fast:      240ms;   /* @kind other */
+  --duration-base:      600ms;   /* @kind other */
+  --duration-slow:      1000ms;  /* @kind other */
+  --stagger-line:       70ms;    /* @kind other */
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-canvas);
+  color: var(--color-press-black);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  font-weight: var(--font-weight-regular);
+  word-break: keep-all;      /* 한글 어절 단위 줄바꿈 */
+  overflow-wrap: break-word;
+}
+
+img { filter: var(--filter-duotone); }
+
+/* ---- 유틸리티 클래스 ---------------------------------------- */
+
+/* 한글 히어로. 한 줄 5~7자로 끊어 3~4줄로 쌓는다. */
+.hero-ko {
+  font-family: var(--font-sans);
+  font-size: var(--text-ko-hero);
+  line-height: var(--leading-ko-hero);
+  letter-spacing: var(--tracking-ko-hero);
+  font-weight: var(--font-weight-w550);
+}
+
+.display-ko {
+  font-family: var(--font-sans);
+  font-size: var(--text-ko-display);
+  line-height: var(--leading-ko-display);
+  letter-spacing: var(--tracking-ko-display);
+  font-weight: var(--font-weight-w550);
+}
+
+.heading-ko {
+  font-family: var(--font-sans);
+  font-size: var(--text-ko-heading);
+  line-height: var(--leading-ko-heading);
+  letter-spacing: var(--tracking-ko-heading);
+  font-weight: var(--font-weight-w550);
+}
+
+/* 라틴 전용. 한글을 넣지 않는다. */
+.display-latin {
+  font-family: var(--font-display-latin);
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  font-weight: var(--font-weight-regular);
+}
+
+/* 마이크로 라벨 — 내비, 버튼, 태그 */
+.micro-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  letter-spacing: 0.06em;
+  font-weight: var(--font-weight-w550);
+  text-transform: uppercase;
+}
+
+/* ---- 반응형 ------------------------------------------------ */
+@media (max-width: 1024px) {
+  :root {
+    --text-ko-hero:    88px;
+    --text-ko-display: 64px;
+    --text-ko-heading: 44px;
+    --text-display:    160px;
+    --text-heading-lg: 96px;
+    --section-gap:     60px;
+    --hero-tile-w:     164px;
+    --hero-tile-h:     116px;
+    --hero-tile-w-sm:  120px;
+    --hero-tile-h-sm:  86px;
+    --gutter:          var(--spacing-30);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --text-ko-hero:    48px;
+    --text-ko-display: 38px;
+    --text-ko-heading: 30px;
+    --text-body:       16px;
+    --text-display:    80px;
+    --text-heading-lg: 56px;
+    --section-gap:     48px;
+    --hero-tile-w:     112px;
+    --hero-tile-h:     78px;
+    --hero-tile-w-sm:  88px;
+    --hero-tile-h-sm:  62px;
+    --gutter:          var(--spacing-20);
+  }
+}
