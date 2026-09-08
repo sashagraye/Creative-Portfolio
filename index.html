@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="_ds/new-form-design-system-2d92d9e6-ee03-4d27-8691-126e785b9f03/tokens/tokens.css">
 <link rel="stylesheet" href="_ds/new-form-design-system-2d92d9e6-ee03-4d27-8691-126e785b9f03/styles.css">
 <script src="_ds/new-form-design-system-2d92d9e6-ee03-4d27-8691-126e785b9f03/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
 <script src="./poster-layers.js"></script>
 <style>
   body { margin: 0; background: var(--surface-canvas); }
@@ -105,7 +106,7 @@
           
         </div>
         <div data-cursor-link="https://www.youtube.com/watch?v=44_bdDDGfCs" data-cursor-note="기획부터 남달랐던 작품 바로가기" style="position:relative;width:640px;height:360px;flex:0 1 640px;cursor:pointer">
-          <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div><div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
+          <image-slot id="pr-bong" style="width:100%;height:100%" radius="14" placeholder="봉을 아십니까 · 16:9"></image-slot><div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
             <span style="font-size:var(--text-body);color:var(--color-bone-white)">봉을 아십니까 (2024) 中</span>
             <span class="micro-label" style="color:var(--color-newsprint-gray)">인터랙티브 단편영화 · 총감독 · 8인</span>
           </div>
@@ -123,7 +124,7 @@
       <div data-reveal="" style="display:flex;flex-wrap:wrap-reverse;align-items:center;gap:var(--spacing-60)">
         <div style="flex:0 1 640px;display:flex;flex-direction:column;gap:var(--spacing-15)">
           <div data-cursor-link="https://www.youtube.com/watch?v=PgGLaXEamo8&amp;t=206s" data-cursor-note="처음부터 끝까지 이끌었던 작품 바로가기" style="position:relative;width:100%;height:360px;cursor:pointer">
-            <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+            <image-slot id="pr-metro" style="width:100%;height:100%" radius="14" placeholder="민트사탕 징크스 · 16:9"></image-slot>
             <video data-loop="media/metro.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
           </div>
           <div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
@@ -147,11 +148,11 @@
           <div style="position:relative;height:min(60vh,640px);flex:0 0 auto;aspect-ratio:9 / 19.5;max-height:calc(100vh - 240px);padding:11px;border-radius:56px;background:var(--color-press-black);box-shadow:0 0 0 1.5px rgba(250,255,250,.16), inset 0 0 0 1.5px rgba(250,255,250,.06)">
             <div style="position:relative;width:100%;height:100%;border-radius:45px;overflow:hidden;background:var(--color-press-black)">
               <div data-swap="0" data-swap-slide="1" data-cursor-link="https://www.youtube.com/shorts/o7E9Ay9c8QE" data-cursor-note="공모전 입선 작품 바로가기" style="position:absolute;inset:0;will-change:transform;cursor:pointer">
-                <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+                <image-slot id="pr-officers5" style="width:100%;height:100%" radius="0" placeholder="장교숙소 5단지 · 9:16"></image-slot>
                 <video data-loop="media/officers5.mp4" data-swap-video="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
               </div>
               <div data-swap="1" data-swap-slide="1" data-cursor-link="https://www.youtube.com/watch?v=6AnOwJ86TJ8" data-cursor-note="공모전 대상 작품 바로가기" style="position:absolute;inset:0;opacity:0;will-change:transform;cursor:pointer">
-                <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+                <image-slot id="pr-seoul-econ" style="width:100%;height:100%" radius="0" placeholder="서울경제 쇼츠 · 9:16"></image-slot>
                 <video data-loop="media/seoul-econ.mp4" data-swap-video="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
               </div>
             </div>
@@ -190,7 +191,7 @@
         </div>
         <div style="flex:0 1 640px;display:flex;flex-direction:column;gap:var(--spacing-15)">
           <div data-cursor-link="https://www.youtube.com/watch?v=oRrBqo2g2gs" data-cursor-note="직접 그려서 영상화한 작품 바로가기" style="position:relative;width:100%;height:360px;cursor:pointer">
-            <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+            <image-slot id="pr-ai-cut" style="width:100%;height:100%" radius="14" fit="contain" placeholder="AI 생성 컷 · 16:9"></image-slot>
             <video data-loop="media/ai-cut.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
           </div>
           <div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
@@ -230,7 +231,7 @@
         <div style="display:flex;flex-wrap:wrap-reverse;align-items:center;justify-content:center;gap:var(--spacing-60);width:100%;text-align:left">
           <div style="flex:0 1 620px;display:flex;flex-direction:column;align-items:center;gap:var(--spacing-15)">
           <div data-cursor-link="https://www.youtube.com/shorts/3NZ9ccGpDJg" data-cursor-note="작품 바로가기" style="position:relative;height:min(60vh,640px);flex:0 0 auto;aspect-ratio:9 / 19.5;max-height:calc(100vh - 240px);cursor:pointer">
-              <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+              <image-slot id="pr-metro-indicator" style="width:100%;height:100%" radius="14" fit="contain" placeholder="Seoul Metro Indicator · 화면"></image-slot>
               <video data-loop="media/metro-indicator.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
             </div>
             <div style="display:flex;flex-direction:column;gap:var(--spacing-8)">
@@ -354,11 +355,11 @@
         <div style="flex:0 1 640px;display:flex;flex-direction:column;align-items:center;gap:var(--spacing-15)">
           <div style="display:flex;gap:var(--spacing-15);width:100%">
             <div data-cursor-link="https://www.youtube.com/shorts/ChHxsycgXYQ" data-cursor-note="시안 1 바로가기" style="position:relative;flex:1 1 0;aspect-ratio:3 / 5;border-radius:var(--radius-images);overflow:hidden;cursor:pointer">
-              <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+              <image-slot id="pr-ai-scent-1" style="width:100%;height:100%" radius="0" fit="contain" placeholder="시안 1"></image-slot>
               <video data-loop="media/scent-1.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
             </div>
             <div data-cursor-link="https://www.youtube.com/shorts/BYVEnpQ6vsw" data-cursor-note="시안 2 바로가기" style="position:relative;flex:1 1 0;aspect-ratio:3 / 5;border-radius:var(--radius-images);overflow:hidden;cursor:pointer">
-              <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+              <image-slot id="pr-ai-scent-2" style="width:100%;height:100%" radius="0" fit="contain" placeholder="시안 2"></image-slot>
               <video data-loop="media/scent-2.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
             </div>
           </div>
@@ -370,7 +371,7 @@
       </div><div data-reveal="" style="display:flex;flex-wrap:wrap-reverse;align-items:center;justify-content:center;gap:var(--spacing-60)">
         <div style="flex:0 1 380px;display:flex;flex-direction:column;align-items:center;gap:var(--spacing-15)">
           <div data-cursor-link="https://www.youtube.com/shorts/_EQjttJx0mQ" data-cursor-note="출품작 바로가기" style="position:relative;width:100%;aspect-ratio:9 / 16;border-radius:var(--radius-images);overflow:hidden;cursor:pointer">
-            <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+            <image-slot id="pr-ai-pureal" style="width:100%;height:100%" radius="0" fit="contain" placeholder="Pureal 공모전 · 9:16"></image-slot>
             <video data-loop="media/pureal.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none"></video>
           </div>
           <div style="display:flex;flex-direction:column;align-items:center;gap:var(--spacing-8)">
@@ -387,7 +388,7 @@
         <h2 class="display-ko" style="margin:0;font-weight:500;text-align:center;color:var(--color-bone-white);max-width:1000px">영상을 만들고 <br>이미지를 만드는<br>지원자 이태현입니다</h2>
         <div style="width:min(100%,860px);display:flex;flex-direction:column;gap:var(--spacing-15)">
           <div data-cursor-link="https://www.youtube.com/watch?v=fGt0tGjqbeM" data-cursor-note="작품 바로가기" style="position:relative;width:100%;height:480px;cursor:pointer">
-            <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:100%"></div>
+            <image-slot id="pr-milk" style="width:100%;height:100%" radius="14" fit="contain" placeholder="우유공장 이야기 · 16:9"></image-slot>
             <video data-loop="media/milk.mp4" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:var(--radius-images);opacity:0;pointer-events:none"></video>
           </div>
           <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--spacing-15)">
@@ -459,7 +460,7 @@
   <section style="max-width:var(--page-max-width);margin:0 auto;padding:0 var(--gutter);display:flex;flex-direction:column">
     <sc-for list="{{ active.rows }}" as="item" hint-placeholder-count="3">
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--spacing-45);border-top:var(--border-hairline) solid var(--color-press-black);padding:var(--spacing-40) 0">
-        <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:480px;height:270px;flex:0 1 480px"></div>
+        <image-slot id="{{ item.slot }}" style="width:480px;height:270px;flex:0 1 480px" radius="14" placeholder="{{ item.placeholder }}"></image-slot>
         <div style="flex:1 1 300px;display:flex;flex-direction:column;gap:var(--spacing-15)">
           <h2 class="heading-ko" style="margin:0;color:var(--color-press-black)">{{ item.title }}</h2>
           <div style="display:flex;flex-direction:column;gap:var(--spacing-4)">
@@ -478,7 +479,7 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,320px));gap:var(--spacing-40)">
         <sc-for list="{{ active.tall }}" as="item" hint-placeholder-count="2">
           <div style="display:flex;flex-direction:column;gap:var(--spacing-15)">
-            <div aria-hidden="true" style="display:block;position:relative;background:transparent;width:100%;height:100%;aspect-ratio:3/2;width:100%;height:560px"></div>
+            <image-slot id="{{ item.slot }}" style="width:100%;height:560px" radius="14" placeholder="{{ item.placeholder }}"></image-slot>
             <h2 class="heading-ko" style="margin:0;color:var(--color-press-black)">{{ item.title }}</h2>
             <span class="micro-label" style="color:var(--color-press-black)">{{ item.genre }}</span>
             <span class="micro-label" style="color:var(--color-newsprint-gray)">{{ item.role }}</span>
