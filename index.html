@@ -144,7 +144,7 @@
 
       <div data-swap-track="1" style="position:relative;width:100%;height:260vh">
         <div style="position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--spacing-20);text-align:center">
-          <h2 class="display-ko" style="margin:0 0 var(--spacing-15);font-weight:500;color:var(--color-bone-white);max-width:900px">플랫폼 <br>스타일에 맞추고</h2>
+          <h2 class="display-ko" style="margin:0 0 var(--spacing-15);font-weight:500;color:var(--color-bone-white);max-width:900px">플랫폼 스타일에 <br>맞추고</h2>
 
           
 
@@ -1169,7 +1169,12 @@ class Component extends DCLogic {
   componentWillUnmount() {
     if (this.io) this.io.disconnect();
     if (this.playIo) this.playIo.disconnect();
-    if (this.loadIo) this.loadIo.disconnect();
+    if (this.onPump) {
+      window.removeEventListener('scroll', this.onPump);
+      window.removeEventListener('resize', this.onPump);
+    }
+    if (this._pumpRaf) cancelAnimationFrame(this._pumpRaf);
+    if (this._idleT) clearTimeout(this._idleT);
     if (this._heroT) clearTimeout(this._heroT);
     if (this._heroT2) clearTimeout(this._heroT2);
     if (this.onSwapScroll) {
@@ -1203,18 +1208,13 @@ class Component extends DCLogic {
         });
       }, { threshold: 0.2 });
     }
-    // 12개를 한꺼번에 받으면 첫 화면이 늦는다. 화면에서 1.5뷰포트 안으로
-    // 들어올 때 비로소 src를 붙여 순서대로 받게 한다.
-    if (!this.loadIo) {
-      this.loadIo = new IntersectionObserver((entries) => {
-        entries.forEach((e) => {
-          if (!e.isIntersecting) return;
-          const v = e.target;
-          this.loadIo.unobserve(v);
-          if (!v.src) v.src = v.getAttribute('data-loop');
-        });
-      }, { rootMargin: '260% 0px' });
-    }
+    // 영상을 한꺼번에 걸면 12개가 대역폭을 나눠 쓰다 제각각 도착한다.
+    // 대기열을 두고 한 번에 하나씩만 받는다. 슬롯이 비면 그때 화면에
+    // 가장 가까운 영상을 고르므로, 평소 스크롤에서는 위에서 아래 순서로,
+    // 멀리 건너뛰면 눈앞의 것부터 준비된다.
+    if (!this._q) this._q = { wait: [], active: 0 };
+    const q = this._q;
+
     document.querySelectorAll('video[data-loop]:not([data-loop-init])').forEach((v) => {
       v.setAttribute('data-loop-init', '1');
       v.muted = true;
@@ -1227,9 +1227,64 @@ class Component extends DCLogic {
         // 스와이프 프레임 안의 영상은 스크롤 스냅 로직이 직접 재생을 제어한다.
         if (!v.hasAttribute('data-swap-video')) this.playIo.observe(v);
       });
-      v.addEventListener('error', () => { v.style.opacity = '0'; });
-      this.loadIo.observe(v);
+      q.wait.push(v);
     });
+    if (reduce || this._pumpBound) return;
+    this._pumpBound = true;
+
+    // 화면까지 남은 거리. 지나간 영상은 살짝 후순위로 밀되 버리지는 않는다.
+    const gap = (v) => {
+      const r = v.getBoundingClientRect();
+      const vh = window.innerHeight || 800;
+      if (r.top > vh) return r.top - vh;
+      if (r.bottom < 0) return -r.bottom * 1.6;
+      return 0;
+    };
+
+    const pump = () => {
+      this._pumpRaf = 0;
+      clearTimeout(this._idleT);
+      const vh = window.innerHeight || 800;
+      while (q.active < 1 && q.wait.length) {
+        let bi = 0, bd = Infinity;
+        for (let i = 0; i < q.wait.length; i++) {
+          const d = gap(q.wait[i]);
+          if (d < bd) { bd = d; bi = i; }
+        }
+        // 아직 두 화면 넘게 떨어져 있으면 지금 받지 않는다. 다만 스크롤이
+        // 멈춰 있으면 1.5초 뒤 가장 가까운 하나를 채워 대기열이 굶지 않게 한다.
+        if (bd > vh * 2 && !this._force) {
+          this._idleT = setTimeout(() => { this._force = true; pump(); }, 1500);
+          return;
+        }
+        this._force = false;
+        const v = q.wait.splice(bi, 1)[0];
+        q.active++;
+        let freed = false;
+        const free = () => {
+          if (freed) return;
+          freed = true;
+          clearTimeout(t);
+          q.active--;
+          schedule();
+        };
+        // 한 영상이 끝까지 안 오면 대기열이 멈춘다 — 6초면 슬롯을 넘긴다.
+        const t = setTimeout(free, 6000);
+        v.addEventListener('loadeddata', free, { once: true });
+        v.addEventListener('error', () => { v.style.opacity = '0'; free(); }, { once: true });
+        v.setAttribute('preload', 'auto');
+        v.src = v.getAttribute('data-loop');
+      }
+    };
+
+    const schedule = () => {
+      if (this._pumpRaf) return;
+      this._pumpRaf = requestAnimationFrame(pump);
+    };
+    this.onPump = schedule;
+    window.addEventListener('scroll', this.onPump, { passive: true });
+    window.addEventListener('resize', this.onPump, { passive: true });
+    pump();
   }
 
   // 영상 카드가 처음 화면에 들어올 때 클릭 안내를 한 번만 잠깐 띄운다.
